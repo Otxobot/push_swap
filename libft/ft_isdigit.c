@@ -1,39 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/12 09:20:20 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/12 13:42:03 by abasante         ###   ########.fr       */
+/*   Created: 2023/05/12 11:38:09 by abasante          #+#    #+#             */
+/*   Updated: 2023/05/12 13:08:45 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../incs/push_swap.h"
+#include "../incs/libft.h"
 
-int main(int ac, char **av)
+int	ft_isdigit(int c)
 {
-	int		i;
-	char	**input;
-
-	if (ac < 2)
-		return (0);
-	if (ac == 2)
-	{
-		input = ft_split(av[1], ' ');
-		if (!check_if_repeat(input) || !check_elements(input))
-		{
-			ft_putstr_fd("Error", 0);
-			return(-1);
-		}
-		if (!is_sorted(input))
-		{
-			
-		}
-	}
-	else
-	{
-
-	}
+	return (c >= '0' && c <= '9');
 }
