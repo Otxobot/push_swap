@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:36:48 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/12 13:44:44 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/15 12:18:46 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int		check_if_repeat(char **input)
 	{
 		while (input[i])
 		{
-			if (ft_atoi(input) == ft_atoi(input[i]))
+			if (ft_atoi(*input) == ft_atoi(input[i]))
 				return (0);
 			i++;
 		}
@@ -37,9 +37,9 @@ int		check_elements(char	**av)
 
 	while (av[i])
 	{
-		if (ft_atoi(av[i]) > INT_MAX)
+		if (ft_atoi(&av[i][j]) > INT_MAX)
 			return (0);
-		if (!ft_isdigit(av[i]))
+		if (!ft_isdigit(av[i][j]))
 			return (0);
 		if (av[i][j] == '-')
 			i++;
@@ -55,21 +55,21 @@ int		check_elements(char	**av)
 	return(1);
 }
 
-static int	ft_isnum(char *num)
-{
-	int	i;
+// static int	ft_isnum(char *num)
+// {
+// 	int	i;
 
-	i = 0;
-	if (num[0] == '-')
-		i++;
-	while (num[i])
-	{
-		if (!ft_isdigit(num[i]))
-			return (0);
-		i++;
-	}
-	return (1);
-}
+// 	i = 0;
+// 	if (num[0] == '-')
+// 		i++;
+// 	while (num[i])
+// 	{
+// 		if (!ft_isdigit(num[i]))
+// 			return (0);
+// 		i++;
+// 	}
+// 	return (1);
+// }
 
 int		is_sorted(char **av)
 {

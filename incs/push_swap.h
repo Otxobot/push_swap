@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:21:01 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/12 13:01:04 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/15 12:19:02 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 
 int			check_if_repeat(char **av);
 int			check_args(char **input);
-static int	ft_isnum(char *num);
+// static int	ft_isnum(char *num);
+int			check_elements(char	**av);
+int			is_sorted(char **av);
 
 #endif
