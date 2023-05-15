@@ -6,7 +6,7 @@
 #    By: abasante <abasante@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/12 09:37:39 by abasante          #+#    #+#              #
-#    Updated: 2023/05/15 14:32:49 by abasante         ###   ########.fr        #
+#    Updated: 2023/05/15 17:22:20 by abasante         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,11 +24,11 @@ OBJ = $(SRC:%.c=%.o)
 
 all:	$(NAME)
 
-%.o: %.c $(HEADER)
-	@$(CC) -c $(CFLAGS) $< -o $@
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME):	$(OBJ)
-	$(NAME) $(OBJ) -o $(NAME)
+	ar -rcs $(NAME) $(OBJ)
 
 clean:
 	rm -rf $(OBJ)
