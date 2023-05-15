@@ -6,11 +6,11 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:25:43 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/12 09:26:49 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/15 12:03:51 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../incs/libft.h"
 
 // static	size_t	ft_count(char const *string, char c);
 // static size_t	ft_wordlen(char const *string, char c);

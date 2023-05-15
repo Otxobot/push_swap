@@ -6,11 +6,11 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:42:45 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/12 09:42:46 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/15 12:05:09 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../incs/libft.h"
 
 size_t	ft_strlen(const char *s)
 {

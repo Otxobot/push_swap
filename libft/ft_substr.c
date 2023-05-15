@@ -6,11 +6,11 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:27:22 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/12 09:28:08 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/15 12:04:02 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../incs/libft.h"
 
 static size_t	check(const char *s, unsigned int start, size_t len)
 {

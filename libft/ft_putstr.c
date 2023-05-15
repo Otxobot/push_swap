@@ -6,11 +6,11 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:41:53 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/12 09:42:05 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/15 12:04:18 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../incs/libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

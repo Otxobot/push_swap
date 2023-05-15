@@ -5,38 +5,37 @@
 #                                                     +:+ +:+         +:+      #
 #    By: abasante <abasante@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/05/12 09:37:39 by abasante          #+#    #+#              #
-#    Updated: 2023/05/15 12:07:09 by abasante         ###   ########.fr        #
+#    Created: 2023/05/15 11:55:50 by abasante          #+#    #+#              #
+#    Updated: 2023/05/15 12:03:21 by abasante         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
+NAME = push_swap
 
-CC = clang
-CFLAGS = -Wall -Wextra -Werror
+SRC = check.c push_swap.c 
 
-HEADER = libft.h
-
-SRC = ft_split.c ft_substr.c ft_putstr.c ft_atoi.c ft_isdigit.c \
-	ft_strlen.c
+HEADER = incs/push_swap.h
 
 OBJ = $(SRC:%.c=%.o)
 
-$(OBJ): $(SRC)
-	$(CC) -c $(CFLAGS) $(SRC)
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
 
 $(NAME):	$(OBJ) $(HEADER)
+	$(MAKE) -C ./libft
+	mv ./libft/libft.a .
+	$(CC) $(CFLAGS) $(OBJ) libft.a -o $(NAME)
 	ar -rcs $(NAME) $(OBJ)
 
-all:	$(NAME)
+all: $(NAME)
 
 clean:
+	$(MAKE) -C ./libft clean
 	rm -rf $(OBJ)
-	rm -rf ./a.out
 
-fclean:	clean
+fclean: clean
 	rm -rf $(NAME)
 
-re:	fclean all
+re: fclean all
 
 .PHONY: all clean fclean re
