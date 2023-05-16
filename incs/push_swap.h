@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:21:01 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/16 15:56:18 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/16 17:27:54 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ int			check_args(char **input);
 int			check_elements(char	**av);
 int			is_sorted(char **av);
 void		free_split(char **input);
+void create_linked_list(char **input, int size);
 
 #endif

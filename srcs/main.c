@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:20:20 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/16 16:24:41 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/16 17:26:14 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main(int ac, char **av)
 {
 	char	**input;
-	//int 	size = 0;
+	int 	size = 0;
 
 	if (ac < 2)
 		return (0);
@@ -34,9 +34,9 @@ int main(int ac, char **av)
 			ft_putstr_fd("Error", 0);
 			return(0);
 		}
-		// while (input[size])
-		// 	size++;
-		//push_swap(input, size);
+		while (input[size])
+			size++;
+		create_linked_list(input, size);
 	}
 	else
 	{
