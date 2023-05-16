@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   free.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/12 09:20:20 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/16 14:02:08 by abasante         ###   ########.fr       */
+/*   Created: 2023/05/16 13:39:29 by abasante          #+#    #+#             */
+/*   Updated: 2023/05/16 14:01:52 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incs/push_swap.h"
 
-int main(int ac, char **av)
+void	free_split(char **input)
 {
-	char	**input;
+	int i = 0;
 
-	if (ac < 2)
-		return (0);
-	if (ac == 2)
+	while (input[i])
 	{
-		input = ft_split(av[1], ' ');
-		if (!check_if_repeat(input) || !check_elements(input))
-		{
-			ft_putstr_fd("Error", 0);
-			return(-1);
-		}
-		if (!is_sorted(input))
-		{
-			free_split(input);
-			ft_putstr_fd("Error", 0);
-			return(-1);
-		}
+		free(input[i]);
+		i++;
 	}
+	free(input);
 }

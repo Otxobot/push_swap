@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:36:48 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/16 13:38:11 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/16 13:59:09 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,29 +51,13 @@ int		check_elements(char	**av)
 	return(1);
 }
 
-// static int	ft_isnum(char *num)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	if (num[0] == '-')
-// 		i++;
-// 	while (num[i])
-// 	{
-// 		if (!ft_isdigit(num[i]))
-// 			return (0);
-// 		i++;
-// 	}
-// 	return (1);
-// }
-
 int 	is_sorted(char** av) 
 {
     int i = 0;
     while (av[i+1] != NULL) 
 	{
-        int num1 = atoi(av[i]);
-        int num2 = atoi(av[i+1]);
+        int num1 = ft_atoi(av[i]);
+        int num2 = ft_atoi(av[i+1]);
         if (num1 > num2) 
 		{
             return 1;
