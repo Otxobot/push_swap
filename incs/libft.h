@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:23:47 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/12 11:40:08 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/16 15:48:30 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
-
-typedef struct      s_list
-{
-    void            *content;
-    struct s_list   *next;
-}                   t_list;
 
 char	**ft_split(char const *s, char c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
