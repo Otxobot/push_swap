@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:20:20 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/16 14:02:08 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/16 15:17:55 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,21 @@ int main(int ac, char **av)
 			free_split(input);
 			ft_putstr_fd("Error", 0);
 			return(-1);
+		}
+	}
+	else
+	{
+		if (!check_if_repeat(av + 1) || !check_elements(av + 1))
+		{
+			printf("There is a repeated number or the arguments are wrong\n");
+			ft_putstr_fd("Error", 0);
+			return(-1);
+		}
+		if (!is_sorted(av + 1))
+		{
+			printf("Arguments are already sorted\n");
+			ft_putstr_fd("Error", 0);
+			return (-1);
 		}
 	}
 }
