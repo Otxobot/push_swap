@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:36:48 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/15 12:18:46 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/16 13:38:11 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		check_if_repeat(char **input)
 {
-	int i = 0;
+	int i = 1;
 
 	while (*input)
 	{
@@ -34,22 +34,18 @@ int		check_elements(char	**av)
 {
 	int i = 0;
 	int j = 0;
-
+	
 	while (av[i])
 	{
 		if (ft_atoi(&av[i][j]) > INT_MAX)
 			return (0);
-		if (!ft_isdigit(av[i][j]))
-			return (0);
-		if (av[i][j] == '-')
-			i++;
-		while(av[i][j])
+		while (av[i][j])
 		{
 			if (ft_isdigit(av[i][j]) == 0)
 				return (0);
 			j++;
 		}
-		i = 0;
+		j = 0;
 		i++;
 	}
 	return(1);
@@ -71,18 +67,18 @@ int		check_elements(char	**av)
 // 	return (1);
 // }
 
-int		is_sorted(char **av)
+int 	is_sorted(char** av) 
 {
-	int i = 0;
-
-	while(av[i])
+    int i = 0;
+    while (av[i+1] != NULL) 
 	{
-		if (!av[1])
-			return(0);
-		if (ft_atoi(av[i]) < ft_atoi(av[1]))
-			i++;
-		else
-			return (1);
-	}
-	return(0);
+        int num1 = atoi(av[i]);
+        int num2 = atoi(av[i+1]);
+        if (num1 > num2) 
+		{
+            return 1;
+        }
+        i++;
+    }
+    return 0;
 }
