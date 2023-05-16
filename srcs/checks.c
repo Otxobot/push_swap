@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:36:48 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/16 13:59:09 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/16 15:29:52 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ int		check_elements(char	**av)
 	{
 		if (ft_atoi(&av[i][j]) > INT_MAX)
 			return (0);
+		if (av[i][j] == '-')
+			i++;
 		while (av[i][j])
 		{
 			if (ft_isdigit(av[i][j]) == 0)

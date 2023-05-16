@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:20:20 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/16 15:17:55 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/16 15:30:11 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int main(int ac, char **av)
 		input = ft_split(av[1], ' ');
 		if (!check_if_repeat(input) || !check_elements(input))
 		{
+			free_split(input);
 			ft_putstr_fd("Error", 0);
 			return(-1);
 		}
@@ -48,4 +49,5 @@ int main(int ac, char **av)
 			return (-1);
 		}
 	}
+	return (0);
 }
