@@ -6,12 +6,14 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:37:42 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/18 12:49:03 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/18 13:11:18 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incs/push_swap.h"
 
+//ft_lstnew returns a pointer to a new node 
+//with the desired value inside it.
 t_list	*ft_lstnew(int number)
 {
 	t_list	*new;
@@ -39,6 +41,7 @@ t_list	*ft_lstlast(t_list *head)
 	return (tmp);
 }
 
+//
 void	ft_lstadd_back(t_list **stack, t_list *new)
 {
 	t_list	*n;

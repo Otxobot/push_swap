@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 15:50:51 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/18 12:46:50 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/18 13:57:41 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ void create_linked_list(char **input)
 	
 	while (input[i])
 	{
-		new = ft_lstnew(ft_atoi(input[i]));
+		new = ft_lstnew(ft_atoi(input[i]));//new node with desired value inside
+		printf("number inside:%d\n", new->number);
 		ft_lstadd_back(a, new);
 		i++;
 	}
