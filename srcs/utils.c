@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:37:42 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/18 13:11:18 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/18 17:18:24 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,9 @@ t_list	*ft_lstlast(t_list *head)
 	t_list 	*tmp;
 
 	tmp = head;
-	while (tmp->next)
+	if (!head)
+		return (NULL);
+	while (tmp->next != NULL)
 	{
 		tmp = tmp->next;
 		if (tmp->next == NULL)
@@ -45,7 +47,8 @@ t_list	*ft_lstlast(t_list *head)
 void	ft_lstadd_back(t_list **stack, t_list *new)
 {
 	t_list	*n;
-
+	
+	//printf("*stack:%p\n", *stack);
 	if (*stack)
 	{
 		n = ft_lstlast(*stack);
@@ -56,5 +59,16 @@ void	ft_lstadd_back(t_list **stack, t_list *new)
 	{
 		*stack = new;
 		(*stack)->next = NULL;
+	}
+}
+
+void	printlist(t_list **head)
+{
+	t_list	*current = *head;
+
+	while (current != NULL)
+	{
+		printf("%d\n", current->number);
+		current = current->next;
 	}
 }
