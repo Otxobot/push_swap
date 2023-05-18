@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:37:42 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/18 17:18:24 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/18 17:50:16 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,19 +46,18 @@ t_list	*ft_lstlast(t_list *head)
 //
 void	ft_lstadd_back(t_list **stack, t_list *new)
 {
-	t_list	*n;
+	t_list	*tmp;
 	
-	//printf("*stack:%p\n", *stack);
-	if (*stack)
+	tmp = ft_lstlast(*stack);
+	if (!*stack)
 	{
-		n = ft_lstlast(*stack);
-		n->next = new;
-		new->next = NULL;
+		*stack = new;
+		printf("list is empty and this is the first node\n");
 	}
 	else
 	{
-		*stack = new;
-		(*stack)->next = NULL;
+		tmp->next = new;	
+		printf("List is not empty\n");
 	}
 }
 
