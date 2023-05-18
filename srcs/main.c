@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:20:20 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/16 17:26:14 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/18 12:46:55 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int main(int ac, char **av)
 		}
 		while (input[size])
 			size++;
-		create_linked_list(input, size);
+		create_linked_list(input);
 	}
 	else
 	{

@@ -6,7 +6,7 @@
 #    By: abasante <abasante@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/15 11:55:50 by abasante          #+#    #+#              #
-#    Updated: 2023/05/16 16:15:54 by abasante         ###   ########.fr        #
+#    Updated: 2023/05/18 12:48:20 by abasante         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = push_swap
 LIBFT = libft/libft.a
 INC = incs
 SRC_DIR = srcs/
-SRC_FILES = checks.c push_swap.c free.c main.c
+SRC_FILES = checks.c push_swap.c free.c main.c utils.c
 
 HEADER = incs/push_swap.h 
 
