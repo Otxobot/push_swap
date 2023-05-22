@@ -6,14 +6,14 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:37:42 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/22 18:02:40 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/22 18:12:27 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incs/push_swap.h"
 
 //ft_lstnew returns a pointer to a new node 
-//with the desired value inside it.
+//with the desired value inside that node.
 t_list	*ft_lstnew(int number)
 {
 	t_list	*new;
