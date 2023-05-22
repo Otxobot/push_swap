@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:37:42 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/22 18:26:31 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/22 18:27:12 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,17 +61,6 @@ void	ft_lstadd_back(t_list **stack, t_list *new)
 		//printf("we set the first node\n");
 		*stack = new;
 		(*stack)->next = NULL;
-	}
-}
-
-void	printlist(t_list **head)
-{
-	t_list	*current = *head;
-
-	while (current != NULL)
-	{
-		printf("%d\n", current->number);
-		current = current->next;
 	}
 }
 

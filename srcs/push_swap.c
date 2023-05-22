@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 15:50:51 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/22 18:23:09 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/22 18:27:21 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,6 @@ void	create_linked_list(t_list **stack, char **input)
 	t_list	*new;
 	int i = 0;
 
-	// *stack = ft_lstnew(ft_atoi(input[i]));
-	// printlist(stack);
-	//i++;
 	while (input[i])
 	{
 		new = ft_lstnew(ft_atoi(input[i]));//creates a pointer to a new node with the desired value inside
