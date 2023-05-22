@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:37:42 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/22 18:12:27 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/22 18:24:55 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ t_list	*ft_lstlast(t_list *head)
 void	ft_lstadd_back(t_list **stack, t_list *new)
 {
 	t_list	*tmp;
-	
+
 	if (*stack != NULL)
 	{
 		tmp = ft_lstlast(*stack);
@@ -82,9 +82,13 @@ void	printLinkedList(t_list *head)
 	tmp = head;
 	while (tmp != NULL)
 	{
-		printf("%d\n", tmp->number);
+		printf("node:\n");
+		printf(" --\n");
+		printf("|%d|\n", tmp->number);
+		printf(" --\n\n\n"); 
 		//ft_putnbr_fd(tmp->number, 1);
-		ft_putendl_fd("", 1);
+		//ft_putendl_fd("", 1);
 		tmp = tmp->next;
 	}
+	printf("linked list finished\n");
 }
