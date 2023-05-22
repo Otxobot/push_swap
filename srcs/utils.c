@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:37:42 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/22 18:24:55 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/22 18:26:31 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,8 +86,6 @@ void	printLinkedList(t_list *head)
 		printf(" --\n");
 		printf("|%d|\n", tmp->number);
 		printf(" --\n\n\n"); 
-		//ft_putnbr_fd(tmp->number, 1);
-		//ft_putendl_fd("", 1);
 		tmp = tmp->next;
 	}
 	printf("linked list finished\n");
