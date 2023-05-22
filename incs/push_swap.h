@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:21:01 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/18 17:17:00 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/22 15:27:49 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ typedef struct			s_list
 {
 	int				number;
 	int				index;
-	struct s_list 	*next;	
+	struct s_list 	*next;	 
 }						t_list;
 
 int			check_if_repeat(char **av);
