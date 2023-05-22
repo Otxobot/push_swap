@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:37:42 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/22 17:14:56 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/22 18:02:40 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,12 @@ t_list	*ft_lstlast(t_list *head)
 
 	tmp = head;
 	if (!head)
-		return (NULL);
+	{
+		return (NULL);	
+	}
 	while (tmp->next != NULL)
 	{
+		//printf("enters here\n");
 		tmp = tmp->next;
 		if (tmp->next == NULL)
 			return (tmp);
@@ -47,16 +50,17 @@ void	ft_lstadd_back(t_list **stack, t_list *new)
 {
 	t_list	*tmp;
 	
-	tmp = ft_lstlast(*stack);
-	if (!*stack)
+	if (*stack != NULL)
 	{
-		printf("list is empty and this is the first node\n");
-		*stack = new;
+		tmp = ft_lstlast(*stack);
+		tmp->next = new;
+		new->next = NULL;
 	}
 	else
 	{
-		tmp->next = new;
-		printf("List is not empty\n");
+		//printf("we set the first node\n");
+		*stack = new;
+		(*stack)->next = NULL;
 	}
 }
 
@@ -68,5 +72,19 @@ void	printlist(t_list **head)
 	{
 		printf("%d\n", current->number);
 		current = current->next;
+	}
+}
+
+void	printLinkedList(t_list *head)
+{
+	t_list	*tmp;
+
+	tmp = head;
+	while (tmp != NULL)
+	{
+		printf("%d\n", tmp->number);
+		//ft_putnbr_fd(tmp->number, 1);
+		ft_putendl_fd("", 1);
+		tmp = tmp->next;
 	}
 }

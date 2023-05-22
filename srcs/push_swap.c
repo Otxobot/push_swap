@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 15:50:51 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/22 17:14:48 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/22 18:02:26 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 void	start_push_swap(char **input)
 {
-	t_list *a;
-	t_list *b;
+	t_list **a;
+	t_list **b;
 
-	b = NULL;
-	a = NULL;
-	create_linked_list(&a, input);
+	a = malloc(sizeof(t_list));
+	b = malloc(sizeof(t_list));
+	*b = NULL;
+	*a = NULL;
+	create_linked_list(a, input);
 }
 
 void	create_linked_list(t_list **stack, char **input)
@@ -32,8 +34,9 @@ void	create_linked_list(t_list **stack, char **input)
 	//i++;
 	while (input[i])
 	{
-		new = ft_lstnew(ft_atoi(input[i]));//new node with desired value inside
+		new = ft_lstnew(ft_atoi(input[i]));//creates a pointer to a new node with the desired value inside
 		ft_lstadd_back(stack, new);
 		i++;
 	}
+	printLinkedList(*stack);
 }
