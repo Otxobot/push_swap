@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:37:42 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/22 18:27:12 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/23 11:07:33 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 //ft_lstnew returns a pointer to a new node 
 //with the desired value inside that node.
-t_list	*ft_lstnew(int number)
+t_list	*ft_lstnew(int number, int l)
 {
 	t_list	*new;
 
@@ -22,7 +22,7 @@ t_list	*ft_lstnew(int number)
 	if (!new)
 		return (NULL);
 	new->number = number;
-	new->index = -1;
+	new->index = l;
 	new->next = NULL;
 	return (new);
 }
@@ -74,7 +74,7 @@ void	printLinkedList(t_list *head)
 		printf("node:\n");
 		printf(" --\n");
 		printf("|%d|\n", tmp->number);
-		printf(" --\n\n\n"); 
+		printf(" --\n index:%d\n\n", tmp->index);
 		tmp = tmp->next;
 	}
 	printf("linked list finished\n");
