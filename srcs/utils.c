@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:37:42 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/23 12:13:40 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/23 13:19:25 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 //ft_lstnew returns a pointer to a new node 
 //with the desired value inside that node.
-t_list	*ft_lstnew(int number, int l)
+t_list	*ft_lstnew(int number)
 {
 	t_list	*new;
 
@@ -22,7 +22,7 @@ t_list	*ft_lstnew(int number, int l)
 	if (!new)
 		return (NULL);
 	new->number = number;
-	new->index = l;
+	new->index = -1;
 	new->next = NULL;
 	return (new);
 }
