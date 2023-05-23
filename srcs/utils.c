@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:37:42 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/23 11:07:33 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/23 12:13:40 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,18 @@ void	ft_lstadd_back(t_list **stack, t_list *new)
 		*stack = new;
 		(*stack)->next = NULL;
 	}
+}
+
+int ft_lstsize(t_list *lst)
+{
+    int i = 0;
+    
+    while (lst != NULL)
+    {
+        lst = lst->next;
+        i++;
+    }
+    return (i);
 }
 
 void	printLinkedList(t_list *head)

@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:21:01 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/23 11:06:05 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/23 12:13:50 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,9 @@ void 		create_linked_list(t_list **head, char **input);
 t_list		*ft_lstnew(int number, int l);
 void		ft_lstadd_back(t_list **stack, t_list *new);
 t_list		*ft_lstlast(t_list *head);
+int 		ft_lstsize(t_list *lst);
 void		start_push_swap(char **input);
 void		printLinkedList(t_list *head);
+void		sort_stack_a(t_list **a, t_list **a);
 
 #endif
