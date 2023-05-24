@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 15:50:51 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/23 16:05:02 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/23 16:09:25 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,8 @@ void	create_linked_list(t_list **stack, char **input)
 	}
 	printLinkedList(*stack);
 
-	printf("\n\nentering index_stack:\n");
-
 	index_stack(stack);
+	printf("\nafter indexing stack correctly:\n");
 
 	printLinkedList(*stack);
 }
