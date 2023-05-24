@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:21:01 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/24 11:27:57 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/24 12:29:14 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,9 @@ void		printLinkedList(t_list *head);
 void		sort_stack_a(t_list **a, t_list **b);
 void		easy_sort(t_list **a, t_list **b, int size);
 t_list		*get_min(t_list  **stack);
+//movements:
 int			sa(t_list **a);
+int			rra(t_list **a);
 
 //trying things, after trying they will change: (NOT CHANGED) when changed, change whatever is inside the parentesees
 

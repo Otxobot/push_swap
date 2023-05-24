@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 12:48:50 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/24 12:20:14 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/24 12:38:18 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,14 @@ void	easy_sort(t_list **a, t_list **b, int size)
 		{
 			sa(a);
 			printf("after sa, case 1:\n");
+			printLinkedList(*a);
+		}
+		else if (((*a)->number > (*a)->next->number) && ((*a)->number > (*a)->next->next->number))
+		{
+			sa(a);
+			printLinkedList(*a);
+			rra(a);
+			printf("after sa, rra, case 2:\n");
 			printLinkedList(*a);
 		}
 	}
