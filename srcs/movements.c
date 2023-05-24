@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 16:08:23 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/24 12:37:50 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/24 13:19:56 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,13 @@ int	rra(t_list **a)
 	
 	if (!(*a) || !(*a)->next)
 		return (0);
+	printf("(*a)->number: %d\n", (*a)->number);
 	tmp = *a;
 	tmp2 = *a;
 	while (tmp->next->next != NULL)
+	{
 		tmp = tmp->next;
+	}
 	tmp2 = tmp->next;
 	tmp->next = NULL;
 	tmp2->next = *a;
