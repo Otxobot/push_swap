@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 15:50:51 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/23 16:09:25 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/24 11:38:13 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	start_push_swap(char **input)
 	*b = NULL;
 	*a = NULL;
 	create_linked_list(a, input);
-	//sort_stack(a, b);
+	sort_stack_a(a, b);
 }
 
 void	create_linked_list(t_list **stack, char **input)
@@ -36,11 +36,9 @@ void	create_linked_list(t_list **stack, char **input)
 		ft_lstadd_back(stack, new);
 		i++;
 	}
-	printLinkedList(*stack);
 
 	index_stack(stack);
 	printf("\nafter indexing stack correctly:\n");
-
 	printLinkedList(*stack);
 }
 
@@ -84,19 +82,14 @@ void	index_stack(t_list	**stack)
 	}
 }
 
-// void	sort_stack_a(t_list **a, t_list **b)
-// {
-// 	//first create a function that checks the size of the linked list, and then we can use that to determine which sorting algorithm to use, if the list is less than 5 se simple sorting algorithm, if the list is more than 5 use the advanced sorting algorithm.
-// 	int size = ft_lstsize(*a);
-
-// 	if (size <= 5)
-// 	{
-// 		//simple sorting algorithm
-// 		easy_sort(a, b, size);
-// 	}
-// 	else if (size > 5)
-// 	{
-// 		//advanced sorting algorithm
-		
-// 	}
-// }
+void	sort_stack_a(t_list **a, t_list **b)
+{
+	//first create a function that checks the size of the linked list, and then we can use that to determine which sorting algorithm to use, if the list is less than 5 se simple sorting algorithm, if the list is more than 5 use the advanced sorting algorithm.
+	int size = ft_lstsize(*a);
+	printf("size of a: %d\n", size);
+	if (size <= 5)
+	{
+		//simple sorting algorithm
+		easy_sort(a, b, size);
+	}
+}
