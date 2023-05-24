@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 16:08:23 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/24 13:33:06 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/24 15:27:00 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ int	rra(t_list **a)
 	
 	if (!(*a) || !(*a)->next)
 		return (0);
-	printf("(*a)->number: %d\n", (*a)->number);
 	tmp = *a;
 	tmp2 = *a;
 	while (tmp->next->next != NULL)
@@ -53,5 +52,20 @@ int	rra(t_list **a)
 
 int	ra(t_list **a)
 {
+	//the first number goes to the end of the linked list.
+	t_list	*tmp;
+	t_list	*tmp2;
 	
+	if (!(*a) || !(*a)->next)
+		return (0);
+	tmp = *a;
+	tmp2 = *a;
+	while (tmp->next != NULL)
+	{
+		tmp = tmp->next;
+	}
+	tmp->next = tmp2;
+	*a = tmp2->next;
+	tmp2->next = NULL;
+	return (0);
 }

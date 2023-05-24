@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 15:50:51 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/24 13:29:46 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/24 15:40:23 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,8 @@ void	create_linked_list(t_list **stack, char **input)
 		ft_lstadd_back(stack, new);
 		i++;
 	}
-
 	index_stack(stack);
 	printf("\nafter indexing stack correctly:\n");
-	printLinkedList(*stack);
 }
 
 t_list	*get_min(t_list  **stack)
@@ -86,7 +84,7 @@ void	sort_stack_a(t_list **a, t_list **b)
 {
 	//first create a function that checks the size of the linked list, and then we can use that to determine which sorting algorithm to use, if the list is less than 5 se simple sorting algorithm, if the list is more than 5 use the advanced sorting algorithm.
 	int size = ft_lstsize(*a);
-	printf("size of a: %d\n", size);
+	printf("size of the link list: %d\n", size);
 	if (size <= 5)
 	{
 		//simple sorting algorithm

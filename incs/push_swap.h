@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:21:01 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/24 12:29:14 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/24 15:27:17 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ t_list		*get_min(t_list  **stack);
 //movements:
 int			sa(t_list **a);
 int			rra(t_list **a);
+int			ra(t_list **a);
 
 //trying things, after trying they will change: (NOT CHANGED) when changed, change whatever is inside the parentesees
 
