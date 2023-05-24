@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 16:08:23 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/24 11:42:37 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/24 12:00:34 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,10 @@ int	sa(t_list **a)
 	if (!(*a) || !(*a)->next)
 		return (0);
 	tmp = *a;
+	// or you can do the same with this: tmp2 = (*a)->next;
 	tmp2 = tmp->next;
 	tmp->next = tmp2->next;
 	tmp2->next = tmp;
 	*a = tmp2;
-	return (1);
+	return (0);
 }
