@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 12:48:50 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/24 13:26:06 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/24 13:32:53 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,16 @@ void	easy_sort(t_list **a, t_list **b, int size)
 		{
 			sa(a);
 		}
-		else if (((*a)->number > (*a)->next->number) && ((*a)->number > (*a)->next->next->number))
+		//case 2:
+		else if (((*a)->number > (*a)->next->number) && ((*a)->next->number > (*a)->next->next->number) && ((*a)->number > (*a)->next->next->number))
 		{
 			sa(a);
 			rra(a);
+		}
+		//case 3:
+		else if (((*a)->number > (*a)->next->number) && ((*a)->number > (*a)->next->next->number) && ((*a)->next->number < (*a)->next->next->number))
+		{
+			ra(a);
 		}
 	}
 }

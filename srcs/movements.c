@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 16:08:23 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/24 13:19:56 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/24 13:33:06 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,9 @@ int	rra(t_list **a)
 	tmp2->next = *a;
 	*a = tmp2;
 	return (0);
+}
+
+int	ra(t_list **a)
+{
+	
 }

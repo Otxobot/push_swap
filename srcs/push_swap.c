@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 15:50:51 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/24 11:38:13 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/24 13:29:46 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,5 +91,6 @@ void	sort_stack_a(t_list **a, t_list **b)
 	{
 		//simple sorting algorithm
 		easy_sort(a, b, size);
+		printLinkedList(*a);
 	}
 }
