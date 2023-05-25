@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:36:48 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/16 16:26:22 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/25 16:06:07 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,23 @@ int 	is_sorted(char** av)
         i++;
     }
     return 0;
+}
+
+int		check_order(t_list **lst, char a)
+{
+	t_list	*cur;
+	t_list 	*next;
+
+	cur = *lst;
+	next = (*lst)->next;
+	while (next != NULL)
+	{
+		if (cur->number > next->number && a == 'a')
+			return (1);
+		if (cur->number < next->number && a == 'b')
+			return (1);
+		cur = cur->next;
+		next = next->next;
+	}
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:21:01 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/25 11:38:36 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/25 16:06:20 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ void		sort_stack_a(t_list **a, t_list **b);
 void		easy_sort(t_list **a, int size);
 void		easy_sort1(t_list **a, int size);
 void		easy_sort_divide(t_list **a, int size);
+int			check_order(t_list **lst, char a);
 
 t_list		*get_min(t_list  **stack);
 //movements:

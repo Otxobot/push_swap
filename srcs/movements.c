@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 16:08:23 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/25 11:42:55 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/25 13:26:01 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ void	ra(t_list **lst)
 	*lst = tmp2->next;
 	tmp2->next = NULL;
 }
+
 
 void	pa(t_list	**lst, t_list	**dst)
 {
