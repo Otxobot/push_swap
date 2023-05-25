@@ -6,13 +6,13 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 11:12:21 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/25 11:25:31 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/25 11:31:01 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incs/push_swap.h"
 
-// void	medium_sort(t_list **a, t_list **b, int size)
-// {
+void	medium_sort(t_list **a, t_list **b, int size)
+{
 	
-// }
+}

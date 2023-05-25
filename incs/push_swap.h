@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:21:01 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/25 10:37:52 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/25 11:38:36 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,9 @@ void		easy_sort_divide(t_list **a, int size);
 
 t_list		*get_min(t_list  **stack);
 //movements:
-int			sa(t_list **a);
-int			rra(t_list **a);
-int			ra(t_list **a);
+void		sa(t_list **a);
+void		rra(t_list **a);
+void		ra(t_list **a);
 
 //trying things, after trying they will change: (NOT CHANGED) when changed, change whatever is inside the parentesees
 

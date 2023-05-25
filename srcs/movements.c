@@ -6,66 +6,70 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 16:08:23 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/24 15:27:00 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/25 11:42:55 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incs/push_swap.h"
 
-int	sa(t_list **a)
+//sa, swaps the first two numbers of the list.
+void	sa(t_list **lst)
 {
-	//swap the first 2 elements at the top of stack a.
 	t_list	*tmp;
 	t_list	*tmp2;
 
-	if (!(*a) || !(*a)->next)
-		return (0);
-	tmp = *a;
-	// or you can do the same with this: tmp2 = (*a)->next;
+	tmp = *lst;
 	tmp2 = tmp->next;
 	tmp->next = tmp2->next;
 	tmp2->next = tmp;
-	*a = tmp2;
-	return (0);
+	*lst = tmp2;
 }
 
-int	rra(t_list **a)
+//the last number in the linked list becomes the first one.
+void	rra(t_list **lst)
 {
-	//the last number in the linked list becomes the first one.
 	t_list	*tmp;
 	t_list	*tmp2;
 	
-	if (!(*a) || !(*a)->next)
+	if (!(*lst) || !(*lst)->next)
 		return (0);
-	tmp = *a;
-	tmp2 = *a;
+	tmp = *lst;
+	tmp2 = *lst;
 	while (tmp->next->next != NULL)
 	{
 		tmp = tmp->next;
 	}
 	tmp2 = tmp->next;
 	tmp->next = NULL;
-	tmp2->next = *a;
-	*a = tmp2;
-	return (0);
+	tmp2->next = *lst;
+	*lst = tmp2;
 }
 
-int	ra(t_list **a)
+//the first number goes to the end of the linked list.
+void	ra(t_list **lst)
 {
-	//the first number goes to the end of the linked list.
 	t_list	*tmp;
 	t_list	*tmp2;
 	
-	if (!(*a) || !(*a)->next)
+	if (!(*lst) || !(*lst)->next)
 		return (0);
-	tmp = *a;
-	tmp2 = *a;
+	tmp = *lst;
+	tmp2 = *lst;
 	while (tmp->next != NULL)
 	{
 		tmp = tmp->next;
 	}
 	tmp->next = tmp2;
-	*a = tmp2->next;
+	*lst = tmp2->next;
 	tmp2->next = NULL;
-	return (0);
+}
+
+void	pa(t_list	**lst, t_list	**dst)
+{
+	t_list	*cur;
+
+	cur = *lst;
+	*lst = (*lst)->next;
+	cur->next = *dst;
+	*dst = cur;
 }
