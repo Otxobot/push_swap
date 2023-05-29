@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 16:08:23 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/29 17:19:29 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/29 17:21:38 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ void	rb(t_list **b)
 }
 
 // push:
-void		push(t_list	**lst, t_list	**dst)
+void	push(t_list	**lst, t_list	**dst)
 {
 	t_list	*cur;
 
