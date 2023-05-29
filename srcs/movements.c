@@ -6,14 +6,14 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 16:08:23 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/29 12:57:53 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/29 17:19:29 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incs/push_swap.h"
 
-//sa, swaps the first two numbers of the list.
-void	sa(t_list **lst)
+//swap:
+void		swap(t_list **lst)
 {
 	t_list	*tmp;
 	t_list	*tmp2;
@@ -25,8 +25,20 @@ void	sa(t_list **lst)
 	*lst = tmp2;
 }
 
-//the last number in the linked list becomes the first one.
-void	rra(t_list **lst)
+void	sa(t_list **a)
+{
+	swap(a);
+	write(1, "sa\n", 3);
+}
+
+void	sb(t_list **b)
+{
+	swap(b);
+	write(1, "sb\n", 3);
+}
+
+//reverse rotate:
+void		reverse_rotate(t_list **lst)
 {
 	t_list	*tmp;
 	t_list	*tmp2;
@@ -43,8 +55,20 @@ void	rra(t_list **lst)
 	*lst = tmp2;
 }
 
-//the first number goes to the end of the linked list.
-void	ra(t_list **lst)
+void	rrb(t_list **b)
+{
+	reverse_rotate(b);
+	write(1, "rrb\n", 4);
+}
+
+void	rra(t_list **a)
+{
+	reverse_rotate(a);
+	write(1, "rra\n", 4);
+}
+
+//rotate
+void		rotate(t_list **lst)
 {
 	t_list	*tmp;
 	t_list	*tmp2;
@@ -60,8 +84,20 @@ void	ra(t_list **lst)
 	tmp2->next = NULL;
 }
 
-//send top of A to top of B or viceversa
-void		pa(t_list	**lst, t_list	**dst)
+void	ra(t_list **a)
+{
+	rotate(a);
+	write(1, "ra\n", 3);
+}
+
+void	rb(t_list **b)
+{
+	rotate(b);
+	write(1, "rb\n", 3);
+}
+
+// push:
+void		push(t_list	**lst, t_list	**dst)
 {
 	t_list	*cur;
 
@@ -69,4 +105,16 @@ void		pa(t_list	**lst, t_list	**dst)
 	*lst = (*lst)->next;
 	cur->next = *dst;
 	*dst = cur;
+}
+
+void	pa(t_list **a, t_list **b)
+{
+	push(b, a);
+	write(1, "pa\n", 3);
+}
+
+void	pb(t_list **a, t_list **b)
+{
+	push(a, b);
+	write(1, "pb\n", 3);
 }

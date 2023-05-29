@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:21:01 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/29 15:11:06 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/29 17:18:49 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,13 +44,25 @@ void		easy_sort_divide(t_list **a, int size);
 int				check_order(t_list **lst, char a);
 void		medium_sort(t_list **a, t_list **b);
 int			cost_in_a(t_list *a, int nbr);
+int			check_max_min(t_list *lst, int number, char c);
 
 t_list			*get_min(t_list  **stack);
 //movements:
-void			sa(t_list **a);
-void			rra(t_list **a);
+void		push(t_list	**lst, t_list	**dst);
+void			pa(t_list **a, t_list **b);
+void			pb(t_list **a, t_list **b);
+
+void		rotate(t_list **lst);
 void			ra(t_list **a);
-void		pa(t_list **lst, t_list **dest);
+void			rb(t_list **b);
+
+void		reverse_rotate(t_list **lst);
+void			rra(t_list **a);
+void			rrb(t_list **b);
+
+void		swap(t_list **lst);
+void			sa(t_list **a);
+void			sb(t_list **b);
 
 //move:
 void		move_a(t_list **lst, int move);
