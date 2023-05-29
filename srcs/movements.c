@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 16:08:23 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/25 13:26:01 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/29 12:57:53 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,6 @@ void	rra(t_list **lst)
 	t_list	*tmp;
 	t_list	*tmp2;
 	
-	if (!(*lst) || !(*lst)->next)
-		return (0);
 	tmp = *lst;
 	tmp2 = *lst;
 	while (tmp->next->next != NULL)
@@ -51,8 +49,6 @@ void	ra(t_list **lst)
 	t_list	*tmp;
 	t_list	*tmp2;
 	
-	if (!(*lst) || !(*lst)->next)
-		return (0);
 	tmp = *lst;
 	tmp2 = *lst;
 	while (tmp->next != NULL)
@@ -64,8 +60,8 @@ void	ra(t_list **lst)
 	tmp2->next = NULL;
 }
 
-
-void	pa(t_list	**lst, t_list	**dst)
+//send top of A to top of B or viceversa
+void		pa(t_list	**lst, t_list	**dst)
 {
 	t_list	*cur;
 

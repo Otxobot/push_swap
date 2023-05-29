@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 11:12:21 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/25 16:55:51 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/29 13:08:08 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,14 @@ void	three_numbers(t_list **a)
 
 void	medium_sort(t_list **a, t_list **b, int size)
 {
+	size = 0;
+	printLinkedList(*a);
 	pa(a, b);
 	pa(a, b);
-	three_numbers(a);
-	
+	sa(a);
+	ra(a);
+	pa(b, a);
+	ra(a);
+	pa(b, a);
+	printLinkedList(*a);
 }

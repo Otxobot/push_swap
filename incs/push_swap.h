@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:21:01 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/25 16:06:20 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/29 12:58:07 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,15 @@ void		sort_stack_a(t_list **a, t_list **b);
 void		easy_sort(t_list **a, int size);
 void		easy_sort1(t_list **a, int size);
 void		easy_sort_divide(t_list **a, int size);
-int			check_order(t_list **lst, char a);
+int				check_order(t_list **lst, char a);
+void			medium_sort(t_list **a, t_list **b, int size);
 
-t_list		*get_min(t_list  **stack);
+t_list			*get_min(t_list  **stack);
 //movements:
-void		sa(t_list **a);
-void		rra(t_list **a);
-void		ra(t_list **a);
+void			sa(t_list **a);
+void			rra(t_list **a);
+void			ra(t_list **a);
+void		pa(t_list **lst, t_list **dest);
 
 //trying things, after trying they will change: (NOT CHANGED) when changed, change whatever is inside the parentesees
 
