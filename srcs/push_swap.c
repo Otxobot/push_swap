@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 15:50:51 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/29 12:57:09 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/29 14:08:25 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,6 @@ void	sort_stack_a(t_list **a, t_list **b)
 			easy_sort_divide(a, size);
 		}
 		else if (size == 5)
-			medium_sort(a, b, size);
+			medium_sort(a, b);
 	}
 }

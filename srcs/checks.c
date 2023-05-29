@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:36:48 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/25 17:30:30 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/29 13:33:27 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int 	is_sorted(char** av)
         int num2 = ft_atoi(av[i+1]);
         if (num1 > num2) 
 		{
-            return 1;
+            return (1);
         }
         i++;
     }
