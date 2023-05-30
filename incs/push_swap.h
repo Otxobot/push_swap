@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:21:01 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/29 17:25:26 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/30 17:22:26 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ void		medium_sort(t_list **a, t_list **b);
 int			cost_in_a(t_list *a, int nbr);
 int			check_max_min(t_list *lst, int number, char c);
 void		three_numbers(t_list **a);
+int			ft_rotate_ab(t_list **a, t_list **b);
 
 t_list			*get_min(t_list  **stack);
 //movements:
@@ -66,10 +67,8 @@ void			sa(t_list **a);
 void			sb(t_list **b);
 
 //move:
-void		move_a(t_list **lst, int move);
 
 //cost:
-int			cost_in_a(t_list *a, int nbr);
 
 //trying things, after trying they will change: (NOT CHANGED) when changed, change whatever is inside the parentesees
 

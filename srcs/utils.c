@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:37:42 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/29 16:54:46 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/30 17:22:07 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,22 +92,22 @@ void	printLinkedList(t_list *head)
 	printf("linked list finished\n");
 }
 
-int		check_max_min(t_list *lst, int number, char c)
-{
-	int	max;
-	int	min;
+// int		check_max_min(t_list *lst, int number, char c)
+// {
+// 	int	max;
+// 	int	min;
 
-	max = number;
-	min = number;
-	while (lst != NULL)
-	{
-		if (max < lst->number)
-			max = lst->number;
-		if (min > lst->number)
-			min = lst->number;
-		lst = lst->next;
-	}
-	if (c == 'M')
-		return (max);
-	return (min);
-}
+// 	max = number;
+// 	min = number;
+// 	while (lst != NULL)
+// 	{
+// 		if (max < lst->number)
+// 			max = lst->number;
+// 		if (min > lst->number)
+// 			min = lst->number;
+// 		lst = lst->next;
+// 	}
+// 	if (c == 'M')
+// 		return (max);
+// 	return (min);
+// }

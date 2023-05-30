@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 15:50:51 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/30 14:34:32 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/30 14:56:06 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,7 @@ void	sort_stack_a(t_list **a, t_list **b)
 		else if (size == 3)
 		{
 			three_numbers(a);
+			printLinkedList(*a);
 			// easy_sort1(a, size);
 			// easy_sort_divide(a, size);
 		}

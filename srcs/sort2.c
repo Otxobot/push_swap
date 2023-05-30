@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 11:12:21 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/30 14:35:57 by abasante         ###   ########.fr       */
+/*   Updated: 2023/05/30 17:17:38 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,37 @@ void	three_numbers(t_list **a)
 	}
 }
 
+void	sort_till_three_left_in_a(t_list **a, t_list **b)
+{
+	int	i;
+	t_list *tmp;
+
+	while (ft_lstsize(*a) > 3)
+	{
+		tmp = *a;
+		i = ft_rotate_ab(a, b);
+	}
+}
+
+// void	medium_sort(t_list **a, t_list **b)
+// {
+// 	printLinkedList(*a);
+// 	printf("------------------\n");
+// 	pb(a, b);
+// 	pb(a, b);
+// 	printLinkedList(*b);
+// 	printLinkedList(*a);
+// 	printf("----three numbers:\n");
+// 	three_numbers(a);
+// 	printLinkedList(*a);
+// }
+
 void	medium_sort(t_list **a, t_list **b)
 {
-	printLinkedList(*a);
-	printf("------------------\n");
-	printLinkedList(*b);
-	pb(a, b);
-	pb(a, b);
-	printLinkedList(*b);
-	printLinkedList(*a);
-	printf("------------------\n");
-	three_numbers(a);
-	printLinkedList(*a);
+	if (ft_lstsize(*a) > 3)
+		pb(a, b);
+	if (ft_lstsize(*a) > 3)
+		pb(a, b);
+	if (ft_lstsize(*a) > 3)
+		sort_till_three_left_in_a(a, b);
 }
