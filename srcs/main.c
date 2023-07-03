@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:20:20 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/23 16:18:43 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/03 13:20:55 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ int main(int ac, char **av)
 			ft_putstr_fd("Error", 0);
 			return (0);
 		}
-		// start_push_swap(av + 1);
 		start_push_swap(av + 1);
 	}
 	return (0);
