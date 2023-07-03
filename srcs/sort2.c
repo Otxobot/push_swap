@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 11:12:21 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/30 17:17:38 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/03 12:43:02 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,17 +35,17 @@ void	three_numbers(t_list **a)
 	}
 }
 
-void	sort_till_three_left_in_a(t_list **a, t_list **b)
-{
-	int	i;
-	t_list *tmp;
+// void	sort_till_three_left_in_a(t_list **a, t_list **b)
+// {
+// 	int	i;
+// 	t_list *tmp;
 
-	while (ft_lstsize(*a) > 3)
-	{
-		tmp = *a;
-		i = ft_rotate_ab(a, b);
-	}
-}
+// 	while (ft_lstsize(*a) > 3)
+// 	{
+// 		tmp = *a;
+// 		i = ft_rotate_ab(a, b);
+// 	}
+// }
 
 // void	medium_sort(t_list **a, t_list **b)
 // {
@@ -60,12 +60,12 @@ void	sort_till_three_left_in_a(t_list **a, t_list **b)
 // 	printLinkedList(*a);
 // }
 
-void	medium_sort(t_list **a, t_list **b)
-{
-	if (ft_lstsize(*a) > 3)
-		pb(a, b);
-	if (ft_lstsize(*a) > 3)
-		pb(a, b);
-	if (ft_lstsize(*a) > 3)
-		sort_till_three_left_in_a(a, b);
-}
+// void	medium_sort(t_list **a, t_list **b)
+// {
+// 	if (ft_lstsize(*a) > 3)
+// 		pb(a, b);
+// 	if (ft_lstsize(*a) > 3)
+// 		pb(a, b);
+// 	if (ft_lstsize(*a) > 3)
+// 		sort_till_three_left_in_a(a, b);
+// }

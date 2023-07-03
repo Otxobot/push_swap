@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 15:50:51 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/30 14:56:06 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/03 12:42:04 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,7 @@ void	index_stack(t_list	**stack)
 void	sort_stack_a(t_list **a, t_list **b)
 {
 	//first create a function that checks the size of the linked list, and then we can use that to determine which sorting algorithm to use, if the list is less than 5 se simple sorting algorithm, if the list is more than 5 use the advanced sorting algorithm.
+	b = NULL;
 	int size = ft_lstsize(*a);
 	if (size <= 5)
 	{
@@ -94,7 +95,7 @@ void	sort_stack_a(t_list **a, t_list **b)
 			// easy_sort1(a, size);
 			// easy_sort_divide(a, size);
 		}
-		else if (size == 5)
-			medium_sort(a, b);
+		// else if (size == 5)
+		// 	medium_sort(a, b);
 	}
 }
