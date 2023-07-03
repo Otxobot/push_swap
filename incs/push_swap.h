@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:21:01 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/03 13:57:18 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/03 14:23:50 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int			check_if_repeat(char **av);
 int			check_args(char **input);
 int			check_elements(char	**av);
 int			is_sorted(char **av);
+int			check_list_sorted(t_list *a);
 void		free_split(char **input);
 void 		create_linked_list(t_list **head, char **input);
 t_list		*ft_lstnew(int number);
@@ -38,6 +39,7 @@ int 		ft_lstsize(t_list *lst);
 void		start_push_swap(char **input);
 void		printLinkedList(t_list *head);
 void		sort(t_list **a, t_list **b);
+void		sort_b(t_list **a, t_list **b);
 int			check_order(t_list **lst, char a);
 void		medium_sort(t_list **a, t_list **b);
 int			cost_in_a(t_list *a, int nbr);
