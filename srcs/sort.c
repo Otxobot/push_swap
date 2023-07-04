@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 11:12:21 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/04 12:25:37 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/04 12:53:50 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,4 @@ void	sort_b(t_list **a, t_list **b)
 	}
 	if ((*b)->index == 0)
 		pa(a,b);
-	//printLinkedList(*b);
-	printLinkedList(*a);
 }

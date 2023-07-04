@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 15:50:51 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/04 11:08:40 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/04 12:54:26 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,9 +83,9 @@ void	sort(t_list **a, t_list **b)
 {
 	//first create a function that checks the size of the linked list, 
 	//and then we can use that to determine which sorting algorithm to use,
-	//if the list is less than 5 se simple sorting algorithm, 
-	//if the list is more than 5 use the advanced sorting algorithm.
-
+	//if the list is less than 5 use small sorting algorithm, 
+	//if the list is more than 5 use the big sorting algorithm.
+	printLinkedList(*a);
 	int size = ft_lstsize(*a);
 	if (size == 2)
 		sa(a);
@@ -95,4 +95,5 @@ void	sort(t_list **a, t_list **b)
 	{
 		sort_b(a, b);
 	}
+	printLinkedList(*a);
 }
