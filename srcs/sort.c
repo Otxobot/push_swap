@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort2.c                                            :+:      :+:    :+:   */
+/*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 11:12:21 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/04 12:53:50 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/04 13:09:43 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void	sort_b(t_list **a, t_list **b)
 		//printLinkedList(*a);
 		sort_b_3(a, b);
 		//printLinkedList(*a);
-		//printLinkedList(*b);
+		//printLinkedList(*a);
 	}
 	if (!check_list_sorted(*a))
 	{
