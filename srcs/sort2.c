@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 11:12:21 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/03 14:26:30 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/04 11:29:08 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,50 @@ void	three_numbers(t_list **a)
 	}
 }
 
-//void for now only, change it to t_list in .h when done.
+//this func sorts and pushes the numbers from A to B 
+//until there are only three numbers left in A
+void	sort_b_3(t_list **a, t_list **b)
+{
+	int i;
+	int size;
+	int pbt;
+	int inditex;
+
+	inditex = 0;
+	pbt = 0;
+	i = 0;
+	size = ft_lstsize(*a);
+	while (size > 3)
+	{
+		if ((*a)->index == inditex)
+		{
+			pb(a, b);
+			pbt++;
+			inditex++;
+			size--;
+		}
+		else if ((*a)->index != inditex)
+		{
+			ra(a);
+		}
+		i++;
+	}
+}
+
+//void for now only, change it to t_list in .h when done. 
+//maybe you don't have to return anything, not sure yet
 void	sort_b(t_list **a, t_list **b)
 {
 	if (ft_lstsize(*a) > 3 && !check_list_sorted(*a))
-		pb(a, b);
-	if (ft_lstsize(*a) > 3 && !check_list_sorted(*a))
-		pb(a, b);
+	{
+		printLinkedList(*a);
+		sort_b_3(a, b);
+		printLinkedList(*a);
+		printLinkedList(*b);
+	}
+	if (!check_list_sorted(*a))
+	{
+		three_numbers(a);
+		printLinkedList(*a);	
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:21:01 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/03 14:23:50 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/04 10:40:10 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,12 +64,6 @@ void			rrb(t_list **b);
 void		swap(t_list **lst);
 void			sa(t_list **a);
 void			sb(t_list **b);
-
-//move:
-
-//cost:
-
-//trying things, after trying they will change: (NOT CHANGED) when changed, change whatever is inside the parentesees
 
 void		index_stack(t_list	**stack);
 

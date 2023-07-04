@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 15:50:51 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/03 14:18:50 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/04 11:08:40 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,6 @@ void	sort(t_list **a, t_list **b)
 		three_numbers(a);
 	else
 	{
-		sort_b(a, b);	
+		sort_b(a, b);
 	}
 }
