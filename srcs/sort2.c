@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 11:12:21 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/04 11:29:08 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/04 12:25:37 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,14 +71,22 @@ void	sort_b(t_list **a, t_list **b)
 {
 	if (ft_lstsize(*a) > 3 && !check_list_sorted(*a))
 	{
-		printLinkedList(*a);
+		//printLinkedList(*a);
 		sort_b_3(a, b);
-		printLinkedList(*a);
-		printLinkedList(*b);
+		//printLinkedList(*a);
+		//printLinkedList(*b);
 	}
 	if (!check_list_sorted(*a))
 	{
 		three_numbers(a);
-		printLinkedList(*a);	
+		//printLinkedList(*a);	
 	}
+	while ((*b)->index != 0)
+	{
+		pa(a,b);
+	}
+	if ((*b)->index == 0)
+		pa(a,b);
+	//printLinkedList(*b);
+	printLinkedList(*a);
 }
