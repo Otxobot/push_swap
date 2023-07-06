@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 15:50:51 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/06 10:47:32 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/06 12:00:11 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,19 @@
 
 void	start_push_swap(char **input)
 {
-	t_list **a;
-	t_list **b;
+	// t_list **a;
+	// t_list **b;
 
-	a = malloc(sizeof(t_list*));
-	b = malloc(sizeof(t_list*));
-	*b = NULL;
-	*a = NULL;
-	create_linked_list(a, input);
-	sort(a, b);
+	// a = malloc(sizeof(t_list*));
+	// b = malloc(sizeof(t_list*));
+	// *b = NULL;
+	// *a = NULL;
+	t_list *a;
+	t_list *b;
+
+	b = NULL;
+	create_linked_list(&a, input);
+	sort(&a, &b);
 }
 
 void	create_linked_list(t_list **stack, char **input)
@@ -101,7 +105,6 @@ void	sort(t_list **a, t_list **b)
 	else if (size == 3)
 		three_numbers(a);
 	else
-	{
 		sort_b(a, b);
-	}
+	free_list(*a);
 }

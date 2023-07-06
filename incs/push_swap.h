@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:21:01 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/06 10:48:39 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/06 11:59:06 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,20 @@ typedef struct			s_list
 	int				p;
 	int				b;
 	int				bson;
-	struct s_list 	*next;	 
-}						t_list;
+	struct s_list 	*next;
+}					t_list;
 
+				//checks:
 int			check_if_repeat(char **av);
 int			check_args(char **input);
 int			check_elements(char	**av);
 int			is_sorted(char **av);
 int			check_list_sorted(t_list *a);
+
+				//free:
 void		free_split(char **input);
+void		free_list(t_list *lst);
+
 void 		create_linked_list(t_list **head, char **input);
 t_list		*ft_lstnew(int number);
 void		ft_lstadd_back(t_list **stack, t_list *new);
@@ -47,7 +52,7 @@ void		sort_b(t_list **a, t_list **b);
 int			check_order(t_list **lst, char a);
 void		medium_sort(t_list **a, t_list **b);
 int			cost_in_a(t_list *a, int nbr);
-int			check_max_min(t_list *lst, int number, char c);
+//int			check_max_min(t_list *lst, int number, char c);
 void		three_numbers(t_list **a);
 int			ft_rotate_ab(t_list **a, t_list **b);
 void		max_and_min(t_list *lst);
