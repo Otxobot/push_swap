@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:20:20 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/03 13:20:55 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/06 09:41:58 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int main(int ac, char **av)
 {
 	char	**input;
-	//int 	size = 0;
 
 	if (ac < 2)
 		return (0);
@@ -25,29 +24,27 @@ int main(int ac, char **av)
 		if (!check_if_repeat(input) || !check_elements(input))
 		{
 			free_split(input);
-			ft_putstr_fd("Error", 0);
-			return(-1);
+			ft_putstr_fd("Error: There is a repeated number or the arguments are wrong\n", 0);
+			return(0);
 		}
 		if (!is_sorted(input))
 		{
 			free_split(input);
-			ft_putstr_fd("Error", 0);
+			ft_putstr_fd("Error: Arguments are already sorted\n", 0);
 			return(0);
 		}
-		start_push_swap(input);
+		return (start_push_swap(input), free_split(input), 0);
 	}
 	else
 	{
 		if (!check_if_repeat(av + 1) || !check_elements(av + 1))
 		{
-			printf("There is a repeated number or the arguments are wrong\n");
-			ft_putstr_fd("Error", 0);
-			return(-1);
+			ft_putstr_fd("Error: There is a repeated number or the arguments are wrong\n", 0);
+			return(0);
 		}
 		if (!is_sorted(av + 1))
 		{
-			printf("Arguments are already sorted\n");
-			ft_putstr_fd("Error", 0);
+			ft_putstr_fd("Error: Arguments are already sorted\n", 0);
 			return (0);
 		}
 		start_push_swap(av + 1);

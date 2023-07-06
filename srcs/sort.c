@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 11:12:21 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/04 13:09:43 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/06 09:25:15 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,11 @@ void	sort_b_3(t_list **a, t_list **b)
 {
 	int i;
 	int size;
-	int pbt;
+	//int pbt;
 	int inditex;
 
 	inditex = 0;
-	pbt = 0;
+	//pbt = 0;
 	i = 0;
 	size = ft_lstsize(*a);
 	while (size > 3)
@@ -53,7 +53,7 @@ void	sort_b_3(t_list **a, t_list **b)
 		if ((*a)->index == inditex)
 		{
 			pb(a, b);
-			pbt++;
+			//pbt++;
 			inditex++;
 			size--;
 		}
