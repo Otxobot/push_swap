@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 15:50:51 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/04 13:00:29 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/06 10:47:32 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void	start_push_swap(char **input)
 void	create_linked_list(t_list **stack, char **input)
 {
 	t_list	*new;
+	t_list	*temp;
 	int i = 0;
 
 	while (input[i])
@@ -37,6 +38,15 @@ void	create_linked_list(t_list **stack, char **input)
 		i++;
 	}
 	index_stack(stack);
+	temp = *stack;
+	while (temp)
+	{
+		temp->list_name = 'a';
+		temp->b = 0;
+		temp = temp->next;
+	}
+	max_and_min(*stack);
+	relative_position(*stack);
 }
 
 t_list	*get_min(t_list  **stack)

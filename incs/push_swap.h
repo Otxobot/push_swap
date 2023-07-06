@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:21:01 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/04 10:40:10 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/06 10:48:39 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,10 @@ typedef struct			s_list
 {
 	int				number;
 	int				index;
+	char			list_name;
+	int				p;
+	int				b;
+	int				bson;
 	struct s_list 	*next;	 
 }						t_list;
 
@@ -46,9 +50,15 @@ int			cost_in_a(t_list *a, int nbr);
 int			check_max_min(t_list *lst, int number, char c);
 void		three_numbers(t_list **a);
 int			ft_rotate_ab(t_list **a, t_list **b);
+void		max_and_min(t_list *lst);
 
 t_list			*get_min(t_list  **stack);
-//movements:
+
+						//position:
+void	max_and_min(t_list *lst);
+void	relative_position(t_list *lst);
+
+						//movements:
 void		push(t_list	**lst, t_list	**dst);
 void			pa(t_list **a, t_list **b);
 void			pb(t_list **a, t_list **b);
@@ -65,6 +75,7 @@ void		swap(t_list **lst);
 void			sa(t_list **a);
 void			sb(t_list **b);
 
+						//index:
 void		index_stack(t_list	**stack);
 
 #endif
