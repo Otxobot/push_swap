@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 15:50:51 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/06 12:00:11 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/06 13:07:46 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,8 @@ void	sort(t_list **a, t_list **b)
 	else if (size == 3)
 		three_numbers(a);
 	else
-		sort_b(a, b);
+	{
+		sort_big(a, b);
+	}
 	free_list(*a);
 }

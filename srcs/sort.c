@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 11:12:21 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/06 09:25:15 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/06 13:00:05 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void	sort_b_3(t_list **a, t_list **b)
 
 //void for now only, change it to t_list in .h when done. 
 //maybe you don't have to return anything, not sure yet
-void	sort_b(t_list **a, t_list **b)
+void	sort_big(t_list **a, t_list **b)
 {
 	if (ft_lstsize(*a) > 3 && !check_list_sorted(*a))
 	{
