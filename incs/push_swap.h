@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:21:01 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/06 13:00:10 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/09 11:58:08 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,15 @@ int			cost_in_a(t_list *a, int nbr);
 void		three_numbers(t_list **a);
 int			ft_rotate_ab(t_list **a, t_list **b);
 void		max_and_min(t_list *lst);
+void		insert_sorted(t_list **a, t_list **b);
 
 t_list			*get_min(t_list  **stack);
 
 						//position:
 void	max_and_min(t_list *lst);
 void	relative_position(t_list *lst);
+t_list	*find(t_list *node, int bson);
+void    insert(t_list **b, t_list **a, t_list *node);
 
 						//movements:
 void		push(t_list	**lst, t_list	**dst);

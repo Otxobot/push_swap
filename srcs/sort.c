@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 11:12:21 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/06 13:00:05 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/09 11:45:32 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ void	sort_big(t_list **a, t_list **b)
 	{
 		//printLinkedList(*a);
 		sort_b_3(a, b);
+		insert_sorted(a, b);
 		//printLinkedList(*a);
 		//printLinkedList(*a);
 	}

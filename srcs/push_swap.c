@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 15:50:51 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/06 13:07:46 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/09 12:02:05 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 void	start_push_swap(char **input)
 {
-	// t_list **a;
-	// t_list **b;
+	t_list **a;
+	t_list **b;
 
-	// a = malloc(sizeof(t_list*));
-	// b = malloc(sizeof(t_list*));
-	// *b = NULL;
-	// *a = NULL;
-	t_list *a;
-	t_list *b;
+	a = malloc(sizeof(t_list*));
+	b = malloc(sizeof(t_list*));
+	*b = NULL;
+	*a = NULL;
+	// t_list *a;
+	// t_list *b;
 
-	b = NULL;
-	create_linked_list(&a, input);
+	// b = NULL;
+	create_linked_list(a, input);
 	sort(&a, &b);
 }
 
@@ -92,7 +92,7 @@ void	index_stack(t_list	**stack)
 		head = get_min(stack);
 	}
 }
-
+ 
 void	sort(t_list **a, t_list **b)
 {
 	//first create a function that checks the size of the linked list, 

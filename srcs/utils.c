@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:37:42 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/06 11:58:47 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/09 11:43:18 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,17 @@ int ft_lstsize(t_list *lst)
         i++;
     }
     return (i);
+}
+
+t_list	*find(t_list *node, int bson)
+{
+	while (node)
+	{
+		if (node->bson == bson)
+			return(node);
+		node = node->next;
+	}
+	return (0);
 }
 
 void	printLinkedList(t_list *head)
