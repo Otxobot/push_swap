@@ -6,7 +6,7 @@
 /*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:21:01 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/09 11:58:08 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/10 11:49:11 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ typedef struct			s_list
 {
 	int				number;
 	int				index;
-	char			list_name;
-	int				p;
+	//char			list_name;
+	int				relp;
 	int				b;
 	int				bson;
 	struct s_list 	*next;
@@ -58,30 +58,30 @@ int			ft_rotate_ab(t_list **a, t_list **b);
 void		max_and_min(t_list *lst);
 void		insert_sorted(t_list **a, t_list **b);
 
-t_list			*get_min(t_list  **stack);
+t_list		*get_min(t_list  **stack);
 
 						//position:
-void	max_and_min(t_list *lst);
-void	relative_position(t_list *lst);
-t_list	*find(t_list *node, int bson);
-void    insert(t_list **b, t_list **a, t_list *node);
+void		max_and_min(t_list *lst);
+void		relative_position(t_list *lst);
+t_list		*find(t_list *node, int bson);
+void    	insert(t_list **b, t_list **a, t_list *node);
 
 						//movements:
-void		push(t_list	**lst, t_list	**dst);
-void			pa(t_list **a, t_list **b);
-void			pb(t_list **a, t_list **b);
+void		push(t_list	**src, t_list	**dst);
+void		pa(t_list **a, t_list **b);
+void		pb(t_list **a, t_list **b);
 
 void		rotate(t_list **lst);
-void			ra(t_list **a);
-void			rb(t_list **b);
+void		ra(t_list **a);
+void		rb(t_list **b);
 
 void		reverse_rotate(t_list **lst);
-void			rra(t_list **a);
-void			rrb(t_list **b);
+void		rra(t_list **a);
+void		rrb(t_list **b);
 
 void		swap(t_list **lst);
-void			sa(t_list **a);
-void			sb(t_list **b);
+void		sa(t_list **a);
+void		sb(t_list **b);
 
 						//index:
 void		index_stack(t_list	**stack);

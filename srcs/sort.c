@@ -6,7 +6,7 @@
 /*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 11:12:21 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/09 11:45:32 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/10 11:52:48 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,23 +65,20 @@ void	sort_b_3(t_list **a, t_list **b)
 	}
 }
 
-//void for now only, change it to t_list in .h when done. 
-//maybe you don't have to return anything, not sure yet
 void	sort_big(t_list **a, t_list **b)
 {
 	if (ft_lstsize(*a) > 3 && !check_list_sorted(*a))
 	{
-		//printLinkedList(*a);
 		sort_b_3(a, b);
-		insert_sorted(a, b);
-		//printLinkedList(*a);
-		//printLinkedList(*a);
+		//insert_sorted(a, b);
 	}
 	if (!check_list_sorted(*a))
 	{
 		three_numbers(a);
-		//printLinkedList(*a);	
 	}
+	//this is a bad solution down here, 
+	//it pushes from b to a in order
+	//but it uses way to many movements, currently working on optimizing with calculating costs etc...
 	while ((*b)->index != 0)
 	{
 		pa(a,b);

@@ -6,7 +6,7 @@
 /*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 15:50:51 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/09 12:02:05 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/10 12:03:44 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	start_push_swap(char **input)
 
 	// b = NULL;
 	create_linked_list(a, input);
-	sort(&a, &b);
+	sort(a, b);
 }
 
 void	create_linked_list(t_list **stack, char **input)
@@ -45,7 +45,7 @@ void	create_linked_list(t_list **stack, char **input)
 	temp = *stack;
 	while (temp)
 	{
-		temp->list_name = 'a';
+		//temp->list_name = 'a';
 		temp->b = 0;
 		temp = temp->next;
 	}
@@ -95,8 +95,8 @@ void	index_stack(t_list	**stack)
  
 void	sort(t_list **a, t_list **b)
 {
-	//first create a function that checks the size of the linked list, 
-	//and then we can use that to determine which sorting algorithm to use,
+	//first use a function that checks the size of the linked list, 
+	//and then we can determine which sorting algorithm to use,
 	//if the list is less than 5 use small sorting algorithm, 
 	//if the list is more than 5 use the big sorting algorithm.
 	int size = ft_lstsize(*a);

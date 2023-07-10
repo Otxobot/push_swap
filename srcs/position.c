@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   position.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 17:21:51 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/06 11:03:36 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/10 11:40:02 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,15 +50,15 @@ void	relative_position(t_list *lst)
 	i = 0;
 	size = ft_lstsize(lst);
 	if (size == 1)
-		lst->p = 0;
+		lst->relp = 0;
 	while (lst->next)
 	{
 		if (i <= size / 2)
-			lst->p = i;
+			lst->relp = i;
 		else
-			lst->p = (size - i) * -1;
+			lst->relp = (size - i) * -1;
 		i++;
 		lst = lst->next;
-		lst->p = -1;
+		lst->relp = -1;
 	}
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   movements.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 16:08:23 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/30 16:10:27 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/10 11:46:56 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,12 +97,12 @@ void	rb(t_list **b)
 }
 
 // push:
-void	push(t_list	**lst, t_list	**dst)
+void	push(t_list	**src, t_list	**dst)
 {
 	t_list	*cur;
 
-	cur = *lst;
-	*lst = (*lst)->next;
+	cur = *src;
+	*src = (*src)->next;
 	cur->next = *dst;
 	*dst = cur;
 }
