@@ -6,7 +6,7 @@
 /*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 11:12:21 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/10 11:52:48 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/10 19:49:23 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,15 @@ void	sort_big(t_list **a, t_list **b)
 	if (ft_lstsize(*a) > 3 && !check_list_sorted(*a))
 	{
 		sort_b_3(a, b);
+		
+		//int b_index = biggest_index(*a);
+		//int s_index = 0;
+		//printf("smallest number in A: %d\n", find_s(*a, s_index)->number);
+		//printf("biggest number in A: %d\n", find_b(*a, b_index)->number);
+		
+		//printf("smallest index in A: %d\n", find_s(*a, s_index)->index);
+		
+		
 		//insert_sorted(a, b);
 	}
 	if (!check_list_sorted(*a))

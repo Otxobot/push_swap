@@ -6,7 +6,7 @@
 /*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 15:50:51 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/10 12:03:44 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/10 19:47:32 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 void	start_push_swap(char **input)
 {
-	t_list **a;
-	t_list **b;
+	t_list *a;
+	t_list *b;
+	int size = ft_lstsize(a);
+	printf("list size: %d\n", size);
 
-	a = malloc(sizeof(t_list*));
-	b = malloc(sizeof(t_list*));
-	*b = NULL;
-	*a = NULL;
-	// t_list *a;
-	// t_list *b;
-
-	// b = NULL;
-	create_linked_list(a, input);
-	sort(a, b);
+	b = NULL;
+	create_linked_list(&a, input);
+	if (size == 2)
+		sa(&a);
+	else if (size == 3)
+		three_numbers(&a);
+	else
+		sort_big(&a, &b);
 }
 
 void	create_linked_list(t_list **stack, char **input)
@@ -93,20 +93,20 @@ void	index_stack(t_list	**stack)
 	}
 }
  
-void	sort(t_list **a, t_list **b)
-{
-	//first use a function that checks the size of the linked list, 
-	//and then we can determine which sorting algorithm to use,
-	//if the list is less than 5 use small sorting algorithm, 
-	//if the list is more than 5 use the big sorting algorithm.
-	int size = ft_lstsize(*a);
-	if (size == 2)
-		sa(a);
-	else if (size == 3)
-		three_numbers(a);
-	else
-	{
-		sort_big(a, b);
-	}
-	free_list(*a);
-}
+// void	sort(t_list **a, t_list **b)
+// {
+// 	//first use a function that checks the size of the linked list, 
+// 	//and then we can determine which sorting algorithm to use,
+// 	//if the list is less than 5 use small sorting algorithm, 
+// 	//if the list is more than 5 use the big sorting algorithm.
+// 	int size = ft_lstsize(*a);
+// 	if (size == 2)
+// 		sa(a);
+// 	else if (size == 3)
+// 		three_numbers(a);
+// 	else
+// 	{
+// 		sort_big(a, b);
+// 	}
+// 	free_list(*a);
+// }

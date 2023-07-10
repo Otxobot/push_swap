@@ -6,7 +6,7 @@
 /*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:37:42 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/09 11:43:18 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/10 19:53:34 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstnew(int number)
 {
 	t_list	*new;
 
-	new = (t_list *)malloc(sizeof(t_list));
+	new = malloc(sizeof(t_list));
 	if (!new)
 		return (NULL);
 	new->number = number;
@@ -66,11 +66,13 @@ void	ft_lstadd_back(t_list **stack, t_list *new)
 
 int ft_lstsize(t_list *lst)
 {
+	t_list 	*tmp;
     int i = 0;
     
-    while (lst != NULL)
+	tmp = lst;
+    while (tmp != NULL)
     {
-        lst = lst->next;
+        tmp = tmp->next;
         i++;
     }
     return (i);
@@ -81,10 +83,45 @@ t_list	*find(t_list *node, int bson)
 	while (node)
 	{
 		if (node->bson == bson)
-			return(node);
+			return (node);
 		node = node->next;
 	}
 	return (0);
+}
+
+t_list	*find_s(t_list *node, int zero)
+{
+	while (node)
+	{
+		if (node->index == zero)
+			return (node);
+		node = node->next;
+	}
+	return (0);
+}
+
+t_list	*find_b(t_list *node, int max)
+{
+	while (node)
+	{
+		if (node->index == max)
+			return (node);
+		node = node->next;
+	}
+	return (0);
+}
+
+int	biggest_index(t_list *node)
+{
+	int b_index = node->index;
+
+	while (node)
+	{
+		if ((node)->index > b_index)
+			b_index = node->index;
+		node = node->next;
+	}
+	return (b_index);
 }
 
 void	printLinkedList(t_list *head)

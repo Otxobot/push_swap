@@ -6,7 +6,7 @@
 /*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 11:45:07 by otxoboy           #+#    #+#             */
-/*   Updated: 2023/07/10 12:04:51 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/10 19:21:56 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,23 @@ void	insert_sorted(t_list **a, t_list **b)
     t_list	*tmp;
 
 	tmp = *a;
-	if ((*b)->number > find(*a, 1)->number 
+	if ((*b)->number > find_b(*a, 1)->number \
 	|| (*b)->number < find(*a, -1)->number)
-		insert(&*b, &*a, find(*a, -1));
+		    insert(&*b, &*a, find(*a, -1));
+    else
+    {
+        if ((*b)->number > ft_lstlast(*a)->number \
+        && (*b)->number < (*a)->number)
+            pa(a, b);
+        else
+        {
+            while ((*b)->number < tmp->number \
+            || (*b)->number > tmp->next->number)
+                tmp = tmp->next;
+            tmp = tmp->next;
+            insert(&*b, &*a, tmp);
+        }
+    }
 }
 
 void    insert(t_list **b, t_list **a, t_list *node)

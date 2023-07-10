@@ -6,7 +6,7 @@
 /*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:21:01 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/10 11:49:11 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/10 19:20:22 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,9 @@ t_list		*get_min(t_list  **stack);
 void		max_and_min(t_list *lst);
 void		relative_position(t_list *lst);
 t_list		*find(t_list *node, int bson);
+t_list		*find_s(t_list *node, int max);
+t_list		*find_b(t_list *node, int max);
+int			biggest_index(t_list *node);
 void    	insert(t_list **b, t_list **a, t_list *node);
 
 						//movements:
