@@ -6,7 +6,7 @@
 /*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:37:42 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/10 19:53:34 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/10 19:56:34 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,16 +33,9 @@ t_list	*ft_lstlast(t_list *head)
 
 	tmp = head;
 	if (!head)
-	{
 		return (NULL);	
-	}
 	while (tmp->next != NULL)
-	{
-		//printf("enters here\n");
 		tmp = tmp->next;
-		if (tmp->next == NULL)
-			return (tmp);
-	}
 	return (tmp);
 }
 

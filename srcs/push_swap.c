@@ -6,7 +6,7 @@
 /*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 15:50:51 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/10 19:47:32 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/10 19:59:04 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void	start_push_swap(char **input)
 		three_numbers(&a);
 	else
 		sort_big(&a, &b);
+	free_list(a);
 }
 
 void	create_linked_list(t_list **stack, char **input)
