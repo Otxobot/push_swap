@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
+/*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 11:12:21 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/10 19:49:23 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/11 11:41:03 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,13 +71,11 @@ void	sort_big(t_list **a, t_list **b)
 	{
 		sort_b_3(a, b);
 		
-		//int b_index = biggest_index(*a);
 		//int s_index = 0;
 		//printf("smallest number in A: %d\n", find_s(*a, s_index)->number);
-		//printf("biggest number in A: %d\n", find_b(*a, b_index)->number);
+		//printf("biggest number in A: %d\n", find(*a, 1)->number);
 		
 		//printf("smallest index in A: %d\n", find_s(*a, s_index)->index);
-		
 		
 		//insert_sorted(a, b);
 	}

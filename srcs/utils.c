@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
+/*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:37:42 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/10 19:56:34 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/11 12:12:10 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,18 +43,11 @@ void	ft_lstadd_back(t_list **stack, t_list *new)
 {
 	t_list	*tmp;
 
-	if (*stack != NULL)
-	{
-		tmp = ft_lstlast(*stack);
-		tmp->next = new;
-		new->next = NULL;
-	}
-	else
-	{
-		//printf("we set the first node\n");
+	tmp = ft_lstlast(*stack);
+	if (!*stack)
 		*stack = new;
-		(*stack)->next = NULL;
-	}
+	else
+		tmp->next = new;
 }
 
 int ft_lstsize(t_list *lst)
