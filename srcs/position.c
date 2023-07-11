@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   position.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
+/*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/30 17:21:51 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/10 19:07:41 by otxoboy          ###   ########.fr       */
+/*   Created: 2023/07/11 14:26:30 by abasante          #+#    #+#             */
+/*   Updated: 2023/07/11 14:26:31 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "../incs/push_swap.h"
 

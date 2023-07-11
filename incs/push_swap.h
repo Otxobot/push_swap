@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:21:01 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/11 12:28:38 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/11 14:23:43 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,8 @@ t_list		*ft_lstlast(t_list *head);
 int 		ft_lstsize(t_list *lst);
 void		start_push_swap(char **input);
 void		printLinkedList(t_list *head);
-void		sort(t_list **a, t_list **b);
-void		sort_big(t_list **a, t_list **b);
+//void		sort(t_list **a, t_list **b);
+void		five_numbers(t_list **a, t_list **b);
 int			check_order(t_list **lst, char a);
 void		medium_sort(t_list **a, t_list **b);
 int			cost_in_a(t_list *a, int nbr);

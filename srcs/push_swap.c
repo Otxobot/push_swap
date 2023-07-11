@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 15:50:51 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/11 12:14:36 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/11 14:26:58 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,15 @@ void	start_push_swap(char **input)
 		sa(&a);
 	else if (size == 3)
 		three_numbers(&a);
+	else if (size <= 5 && size > 1)
+	{
+		//printLinkedList(a);
+		five_numbers(&a, &b);
+		//printLinkedList(a);
+	}
 	else
 	{
-		printLinkedList(a);
-		sort_big(&a, &b);
-		printLinkedList(a);
+		big_numbers(&a, &b);
 	}
 	free_list(a);
 }
