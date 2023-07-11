@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
+/*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:21:01 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/10 19:20:22 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/11 12:28:38 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ typedef struct			s_list
 	int				index;
 	//char			list_name;
 	int				relp;
-	int				b;
 	int				bson;
+	int				b;
 	struct s_list 	*next;
 }					t_list;
 

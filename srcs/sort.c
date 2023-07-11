@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 11:12:21 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/11 11:41:03 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/11 13:42:56 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,15 +69,20 @@ void	sort_big(t_list **a, t_list **b)
 {
 	if (ft_lstsize(*a) > 3 && !check_list_sorted(*a))
 	{
+		printf("this is the smallest number in A: %d\n", find(*a, -1)->number);
+
 		sort_b_3(a, b);
+
+		// printf("ptr: %p\n", &(find(*b, 1)->number));
+		// printf("ptr: %p\n", &(find(*b, -1)->number));
+		// printf("this is the biggest number in A: %d\n", find(*b, 1)->number);
+		// printf("this is the smallest number in A: %d\n", find(*b, -1)->number);
+		// printf("this is the biggest number in A: %d\n", find(*b, 1)->number);
 		
-		//int s_index = 0;
-		//printf("smallest number in A: %d\n", find_s(*a, s_index)->number);
-		//printf("biggest number in A: %d\n", find(*a, 1)->number);
 		
-		//printf("smallest index in A: %d\n", find_s(*a, s_index)->index);
-		
-		//insert_sorted(a, b);
+		//printf("this is the biggest number in A: %d\n", find(*a, 1)->number);
+
+		insert_sorted(a, b);
 	}
 	if (!check_list_sorted(*a))
 	{

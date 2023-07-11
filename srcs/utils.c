@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:37:42 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/11 12:12:10 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/11 13:44:02 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,40 +75,40 @@ t_list	*find(t_list *node, int bson)
 	return (0);
 }
 
-t_list	*find_s(t_list *node, int zero)
-{
-	while (node)
-	{
-		if (node->index == zero)
-			return (node);
-		node = node->next;
-	}
-	return (0);
-}
+// t_list	*find_s(t_list *node, int zero)
+// {
+// 	while (node)
+// 	{
+// 		if (node->index == zero)
+// 			return (node);
+// 		node = node->next;
+// 	}
+// 	return (0);
+// }
 
-t_list	*find_b(t_list *node, int max)
-{
-	while (node)
-	{
-		if (node->index == max)
-			return (node);
-		node = node->next;
-	}
-	return (0);
-}
+// t_list	*find_b(t_list *node, int max)
+// {
+// 	while (node)
+// 	{
+// 		if (node->index == max)
+// 			return (node);
+// 		node = node->next;
+// 	}
+// 	return (0);
+// }
 
-int	biggest_index(t_list *node)
-{
-	int b_index = node->index;
+// int	biggest_index(t_list *node)
+// {
+// 	int b_index = node->index;
 
-	while (node)
-	{
-		if ((node)->index > b_index)
-			b_index = node->index;
-		node = node->next;
-	}
-	return (b_index);
-}
+// 	while (node)
+// 	{
+// 		if ((node)->index > b_index)
+// 			b_index = node->index;
+// 		node = node->next;
+// 	}
+// 	return (b_index);
+// }
 
 void	printLinkedList(t_list *head)
 {
@@ -120,7 +120,10 @@ void	printLinkedList(t_list *head)
 		printf("node:\n");
 		printf(" --\n");
 		printf("|%d|\n", tmp->number);
-		printf(" --\n index:%d\n\n", tmp->index);
+		printf(" --\n index:%d", tmp->index);
+		printf("   \n relp: %d\n", tmp->relp);
+		printf("   \n bson: %d\n", tmp->bson);
+		printf("---------\n");
 		tmp = tmp->next;
 	}
 	printf("linked list finished\n");
