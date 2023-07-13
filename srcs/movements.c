@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   movements.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 14:26:22 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/11 14:26:24 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/13 12:51:09 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,16 @@ void		swap(t_list **lst)
 	tmp->next = tmp2->next;
 	tmp2->next = tmp;
 	*lst = tmp2;
+}
+
+void	double_swap(t_list **a, t_list **b)
+{
+	if (*a && *b && (*a)->next && (*b)->next)
+	{
+		swap(&*a);
+		swap(&*b);
+		ft_putstr_fd("ss\n", 1);
+	}
 }
 
 void	sa(t_list **a)
@@ -53,6 +63,16 @@ void		reverse_rotate(t_list **lst)
 	tmp->next = NULL;
 	tmp2->next = *lst;
 	*lst = tmp2;
+}
+
+void	double_reverse_rotate(t_list **a, t_list **b)
+{
+	if (*a && *b && (*a)->next && (*b)->next)
+	{
+		reverse_rotate(&*a);
+		reverse_rotate(&*b);
+		ft_putstr_fd("rrr\n", 1);
+	}
 }
 
 void	rrb(t_list **b)
@@ -96,6 +116,15 @@ void	rb(t_list **b)
 	write(1, "rb\n", 3);
 }
 
+void	double_rotate(t_list **a, t_list **b)
+{
+	if (*a && *b && (*a)->next && (*b)->next)
+	{
+		rotate(&*a);
+		rotate(&*b);
+		ft_putstr_fd("rr\n", 1);
+	}
+}
 // push:
 void	push(t_list	**src, t_list	**dst)
 {

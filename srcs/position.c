@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   position.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 14:26:30 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/11 14:26:31 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/13 12:55:21 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,4 +62,14 @@ void	relative_position(t_list *lst)
 		lst = lst->next;
 		lst->relp = -1;
 	}
+}
+
+void	repos_list(t_list **lst)
+{
+	if (find(*lst, -1)->relp > 0)
+		while (find(*lst, -1)->relp != 0)
+			rotate(&*lst);
+	else if (find(*lst, -1)->relp < 0)
+		while (find(*lst, -1)->relp != 0)
+			reverse_rotate(&*lst);
 }

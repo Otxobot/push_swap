@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:37:42 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/11 14:10:00 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/13 12:45:47 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,23 @@ t_list	*find(t_list *node, int bson)
 		node = node->next;
 	}
 	return (0);
+}
+
+int	absolute(int num)
+{
+	if (num < 0)
+		num *= -1;
+	return (num);
+}
+
+void	finish(t_list **lst)
+{
+	if (find(*lst, -1)->relp > 0)
+		while (find(*lst, -1)->relp != 0)
+			rotate(&*lst);
+	else if (find(*lst, -1)->relp < 0)
+		while (find(*lst, -1)->relp != 0)
+			rra(&*lst);
 }
 
 void	printLinkedList(t_list *head)
