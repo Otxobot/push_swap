@@ -6,7 +6,7 @@
 /*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 15:50:51 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/13 13:03:00 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/13 15:53:06 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,19 +20,17 @@ void	start_push_swap(char **input)
 	b = NULL;
 	create_linked_list(&a, input);
 	int size = ft_lstsize(a);
-	//printf("list size: %d\n", size);
 	if (size == 2)
 		sa(&a);
 	else if (size == 3)
 		three_numbers(&a);
 	else if (size <= 5 && size > 1)
 	{
-		//printLinkedList(a);
 		five_numbers(&a, &b);
-		//printLinkedList(a);
 	}
 	else
 	{
+		ft_print_lists(a, b);
 		big_numbers(&a, &b);
 	}
 	free_list(a);
@@ -49,7 +47,7 @@ void	create_linked_list(t_list **stack, char **input)
 		ft_lstadd_back(&*stack, ft_lstnew(ft_atoi(input[i])));
 		i++;
 	}
-	index_stack(stack);
+	index_stack(&*stack);
 	temp = *stack;
 	while (temp)
 	{
@@ -92,7 +90,7 @@ void	index_stack(t_list	**stack)
 
 	index = 0;
 	//finds the node with the smallest number:
-	head = get_min(stack);
+	head = get_min(&*stack);
 	while (head != NULL)
 	{
 		head->index = index++;

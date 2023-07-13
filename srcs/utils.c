@@ -6,7 +6,7 @@
 /*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:37:42 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/13 12:45:47 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/13 15:52:50 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,21 +92,41 @@ void	finish(t_list **lst)
 			rra(&*lst);
 }
 
-void	printLinkedList(t_list *head)
-{
-	t_list	*tmp;
+// void	printLinkedList(t_list *head)
+// {
+// 	t_list	*tmp;
 
-	tmp = head;
-	while (tmp != NULL)
+// 	tmp = head;
+// 	while (tmp != NULL)
+// 	{
+// 		printf("node:\n");
+// 		printf("|-----------|\n");
+// 		printf("|%d\n       |", tmp->number);
+// 		printf("|\n index:%d|", tmp->index);
+// 		printf("|\n relp: %d|\n", tmp->relp);
+// 		printf("|\n bson: %d|\n", tmp->bson);
+// 		printf("-------------\n");
+// 		tmp = tmp->next;
+// 	}
+// 	printf("linked list finished\n");
+// }
+
+void	ft_print_lists(t_list *a, t_list *b)
+{
+	printf("LISTA A:\n\n");
+	while (a)
 	{
-		printf("node:\n");
-		printf(" --\n");
-		printf("|%d|\n", tmp->number);
-		printf(" --\n index:%d", tmp->index);
-		printf("   \n relp: %d\n", tmp->relp);
-		printf("   \n bson: %d\n", tmp->bson);
-		printf("---------\n");
-		tmp = tmp->next;
+		printf("(%2d) |%2d| (%2d)\n\n", a->relp, a->number, a->b);
+		if (a->next == 0)
+			break ;
+		a = a->next;
 	}
-	printf("linked list finished\n");
+	printf("LISTA B:\n\n");
+	while (b)
+	{
+		printf("(%2d) |%2d| (%2d)\n\n", b->relp, b->number, b->b);
+		if (b->next == 0)
+			break ;
+		b = b->next;
+	}
 }
