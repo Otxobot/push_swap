@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort2.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
+/*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 14:25:48 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/13 13:03:44 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/14 13:12:04 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void	big_numbers(t_list **a, t_list **b)
     while (*a)
     {
         insertion_place(*a, *b);
-        amv = select1(*a, *b)->relp;
-        bmv = select1(*a, *b)->relp;
+        amv = ft_select(*a, *b)->relp;
+        bmv = ft_select(*a, *b)->b;
         while (amv > 0 && bmv > 0 && amv-- && bmv--)
             double_rotate(&*a, &*b);
         while (amv < 0 && bmv < 0 && amv++ && bmv++)
@@ -35,6 +35,7 @@ void	big_numbers(t_list **a, t_list **b)
         while (bmv > 0 && bmv--)
             rb(&*b);
         pb(a, b);
+        ft_print_lists(*a, *b);
     }
     while (*b)
         pa(a, b);
@@ -47,6 +48,7 @@ void    insertion_place(t_list *src, t_list *dst)
 
     while (src && dst && dst->next)
     {
+        printf("times entered\n");
         if (src->number > find(dst, 1)->number || src->number < find(dst, -1)->number)
         {
             src->b = find(dst, 1)->relp;
@@ -71,30 +73,35 @@ void    insertion_place(t_list *src, t_list *dst)
     }
 }
 
-t_list  *select1(t_list *lst, t_list *b)
+t_list	*ft_select(t_list *lst, t_list *b)
 {
-    t_list *selected;
-    int     moves;
+	t_list	*selected;
+	int		moves;
 
-    moves = absolute(lst->relp) + absolute(lst->b);
-    selected = lst;
-    while (lst)
-    {
-        if (absolute(lst->relp) + absolute(lst->b) == moves)
-        {
-            if ((b && (find(b, 1)->relp > 0 && lst->relp > 0))\
-            || (find(b, 1)->relp < 0 && lst->relp < 0))
+	moves = absolute(lst->relp) + absolute(lst->b);
+	selected = lst;
+	while (lst)
+	{
+		if (absolute(lst->relp) + absolute(lst->b) == moves)
+		{
+			if (b && ((find(b, 1)->relp > 0 && lst->relp > 0) \
+			|| (find(b, 1)->relp < 0 && lst->relp < 0)))
+            {
                 selected = lst;
-            if (b && ((lst->relp < 0 && lst->b < 0) || (lst->relp > 0 && lst->b > 0))\
-            && absolute(lst->relp) > absolute(lst->b))
+            }
+			if (b && ((lst->relp < 0 && lst->b < 0) || (lst->relp > 0 && lst->b > 0)) \
+			&& absolute(lst->relp) > absolute(lst->b))
+            {
                 selected = lst;
-        }
-        if (absolute(lst->relp) + absolute(lst->b) < moves)
-        {
-            moves = absolute(lst->relp) + absolute(lst->b);
-            selected = lst;
-        }
-        lst = lst->next;
-    }
-    return (selected);
+            }
+		}
+		if (absolute(lst->relp) + absolute(lst->b) < moves)
+		{
+			moves = absolute(lst->relp) + absolute(lst->b);
+			selected = lst;
+		}
+        printf("lst number: %d\n", lst->number);
+		lst = lst->next;
+	}
+	return (selected);
 }

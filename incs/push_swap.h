@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
+/*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:21:01 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/13 15:52:38 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/14 11:18:42 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ t_list		*find(t_list *node, int bson);
 // int			biggest_index(t_list *node);
 void    	insert(t_list **b, t_list **a, t_list *node);
 void    	insertion_place(t_list *src, t_list *dst);
-t_list  	*select1(t_list *lst, t_list *b);
+t_list  	*ft_select(t_list *lst, t_list *b);
 
 						//movements:
 void		push(t_list	**src, t_list	**dst);

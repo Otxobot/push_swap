@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
+/*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:37:42 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/13 15:52:50 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/14 11:05:14 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,8 @@ t_list	*find(t_list *node, int bson)
 			return (node);
 		node = node->next;
 	}
+	if (node == NULL)
+		printf("THERE IS NOTHING HERE MF\n\n");
 	return (0);
 }
 

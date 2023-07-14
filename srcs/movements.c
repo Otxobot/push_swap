@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   movements.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
+/*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 14:26:22 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/13 12:51:09 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/14 12:50:13 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void		swap(t_list **lst)
 	tmp->next = tmp2->next;
 	tmp2->next = tmp;
 	*lst = tmp2;
+	relative_position(*lst);
 }
 
 void	double_swap(t_list **a, t_list **b)
@@ -63,6 +64,7 @@ void		reverse_rotate(t_list **lst)
 	tmp->next = NULL;
 	tmp2->next = *lst;
 	*lst = tmp2;
+	relative_position(*lst);
 }
 
 void	double_reverse_rotate(t_list **a, t_list **b)
@@ -102,6 +104,7 @@ void		rotate(t_list **lst)
 	tmp->next = tmp2;
 	*lst = tmp2->next;
 	tmp2->next = NULL;
+	relative_position(*lst);
 }
 
 void	ra(t_list **a)
@@ -134,6 +137,13 @@ void	push(t_list	**src, t_list	**dst)
 	*src = (*src)->next;
 	cur->next = *dst;
 	*dst = cur;
+	(*dst)->bson = 0;
+	(*dst)->b = 0;
+	
+	relative_position(*src);
+	relative_position(*dst);
+	max_and_min(*src);
+	max_and_min(*dst);
 }
 
 void	pa(t_list **a, t_list **b)
