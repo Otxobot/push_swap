@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 15:50:51 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/14 11:44:12 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/16 12:38:02 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,9 @@ void	start_push_swap(char **input)
 	}
 	else
 	{
+		ft_print_lists(a, b);
 		big_numbers(&a, &b);
+		ft_print_lists(a, b);
 	}
 	free_list(a);
 }

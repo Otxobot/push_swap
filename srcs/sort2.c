@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort2.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 14:25:48 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/14 13:12:04 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/16 12:37:30 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	big_numbers(t_list **a, t_list **b)
         while (bmv > 0 && bmv--)
             rb(&*b);
         pb(a, b);
-        ft_print_lists(*a, *b);
+        //ft_print_lists(*a, *b);
     }
     while (*b)
         pa(a, b);
@@ -48,7 +48,6 @@ void    insertion_place(t_list *src, t_list *dst)
 
     while (src && dst && dst->next)
     {
-        printf("times entered\n");
         if (src->number > find(dst, 1)->number || src->number < find(dst, -1)->number)
         {
             src->b = find(dst, 1)->relp;
@@ -100,7 +99,6 @@ t_list	*ft_select(t_list *lst, t_list *b)
 			moves = absolute(lst->relp) + absolute(lst->b);
 			selected = lst;
 		}
-        printf("lst number: %d\n", lst->number);
 		lst = lst->next;
 	}
 	return (selected);

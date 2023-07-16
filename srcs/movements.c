@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   movements.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 14:26:22 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/14 12:50:13 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/16 12:34:38 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,17 +133,17 @@ void	push(t_list	**src, t_list	**dst)
 {
 	t_list	*cur;
 
-	cur = *src;
-	*src = (*src)->next;
-	cur->next = *dst;
-	*dst = cur;
-	(*dst)->bson = 0;
-	(*dst)->b = 0;
-	
-	relative_position(*src);
-	relative_position(*dst);
-	max_and_min(*src);
-	max_and_min(*dst);
+	if (*src)
+	{
+		cur = *src;
+		*src = (*src)->next;
+		cur->next = *dst;
+		*dst = cur;
+		(*dst)->bson = 0;
+		(*dst)->b = 0;	
+	}
+	positionize(&*src);
+	positionize(&*dst);
 }
 
 void	pa(t_list **a, t_list **b)

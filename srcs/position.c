@@ -3,15 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   position.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 14:26:30 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/14 12:45:40 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/16 12:34:43 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../incs/push_swap.h"
+
+void	positionize(t_list **lst)
+{
+	if (*lst)
+	{
+		max_and_min(*lst);
+		relative_position(*lst);	
+	}
+}
 
 void	max_and_min(t_list *lst)
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:21:01 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/14 11:18:42 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/16 12:35:04 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,9 +67,8 @@ t_list		*get_min(t_list  **stack);
 void		max_and_min(t_list *lst);
 void		relative_position(t_list *lst);
 t_list		*find(t_list *node, int bson);
-// t_list		*find_s(t_list *node, int max);
-// t_list		*find_b(t_list *node, int max);
-// int			biggest_index(t_list *node);
+void		positionize(t_list **lst);
+
 void    	insert(t_list **b, t_list **a, t_list *node);
 void    	insertion_place(t_list *src, t_list *dst);
 t_list  	*ft_select(t_list *lst, t_list *b);
