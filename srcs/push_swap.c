@@ -6,7 +6,7 @@
 /*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 15:50:51 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/16 12:38:02 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/17 14:52:28 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,20 @@ void	start_push_swap(char **input)
 	if (size == 2)
 		sa(&a);
 	else if (size == 3)
-		three_numbers(&a);
+	{
+		three_numbers(&a);	
+	}
 	else if (size <= 5 && size > 1)
 	{
+		//ft_print_lists(a, b);
 		five_numbers(&a, &b);
+		//ft_print_lists(a, b);
 	}
 	else
 	{
-		ft_print_lists(a, b);
+		//ft_print_lists(a, b);
 		big_numbers(&a, &b);
-		ft_print_lists(a, b);
+		//ft_print_lists(a, b);
 	}
 	free_list(a);
 }

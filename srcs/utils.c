@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:37:42 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/14 11:05:14 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/17 14:46:44 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,24 +94,22 @@ void	finish(t_list **lst)
 			rra(&*lst);
 }
 
-// void	printLinkedList(t_list *head)
-// {
-// 	t_list	*tmp;
+void	printLinkedList(t_list *head)
+{
+	t_list	*tmp;
 
-// 	tmp = head;
-// 	while (tmp != NULL)
-// 	{
-// 		printf("node:\n");
-// 		printf("|-----------|\n");
-// 		printf("|%d\n       |", tmp->number);
-// 		printf("|\n index:%d|", tmp->index);
-// 		printf("|\n relp: %d|\n", tmp->relp);
-// 		printf("|\n bson: %d|\n", tmp->bson);
-// 		printf("-------------\n");
-// 		tmp = tmp->next;
-// 	}
-// 	printf("linked list finished\n");
-// }
+	tmp = head;
+	while (tmp != NULL)
+	{
+		printf("node:\n");
+		printf("|-----------|\n");
+		printf("|%d\n       |", tmp->number);
+		printf("|\n index:%d|", tmp->index);
+		printf("-------------\n");
+		tmp = tmp->next;
+	}
+	printf("linked list finished\n");
+}
 
 void	ft_print_lists(t_list *a, t_list *b)
 {

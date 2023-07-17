@@ -6,7 +6,7 @@
 /*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 14:26:22 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/16 12:34:38 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/17 14:59:45 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,15 @@ void	double_swap(t_list **a, t_list **b)
 	{
 		swap(&*a);
 		swap(&*b);
-		ft_putstr_fd("ss\n", 1);
+		write (1, "ss\n", 3);
+		//ft_putstr_fd("ss\n", 1);
 	}
 }
 
 void	sa(t_list **a)
 {
 	swap(a);
+	//ft_putstr_fd("sa\n", 1);
 	write(1, "sa\n", 3);
 }
 
@@ -73,6 +75,7 @@ void	double_reverse_rotate(t_list **a, t_list **b)
 	{
 		reverse_rotate(&*a);
 		reverse_rotate(&*b);
+		write (1, "rrr\n", 4);
 		ft_putstr_fd("rrr\n", 1);
 	}
 }
@@ -125,7 +128,8 @@ void	double_rotate(t_list **a, t_list **b)
 	{
 		rotate(&*a);
 		rotate(&*b);
-		ft_putstr_fd("rr\n", 1);
+		write (1, "rr\n", 3);
+		//ft_putstr_fd("rr\n", 1);
 	}
 }
 // push:

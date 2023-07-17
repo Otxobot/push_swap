@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   free.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 13:39:29 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/06 11:55:01 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/17 13:33:46 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,14 @@ void	free_split(char **input)
 	free(input);
 }
 
-void	free_list(t_list *lst)
+void free_list(t_list *stack)
 {
-	t_list *tmp;
+    t_list *temp;
 
-	
-	while (lst)
-	{
-		tmp = lst->next;
-		free(lst);
-		lst = tmp;
-	}
+    while (stack)
+    {
+        temp = stack;
+        stack = stack->next;
+        free(temp);
+    }
 }

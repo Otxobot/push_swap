@@ -6,7 +6,7 @@
 /*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 11:12:21 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/13 12:42:38 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/17 14:48:23 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,29 +39,23 @@ void	three_numbers(t_list **a)
 //until there are only three numbers left in A
 void	sort_b_3(t_list **a, t_list **b)
 {
-	int i;
 	int size;
-	//int pbt;
 	int inditex;
 
 	inditex = 0;
-	//pbt = 0;
-	i = 0;
 	size = ft_lstsize(*a);
 	while (size > 3)
 	{
 		if ((*a)->index == inditex)
 		{
 			pb(a, b);
-			//pbt++;
-			inditex++;
 			size--;
+			inditex++;
 		}
 		else if ((*a)->index != inditex)
 		{
 			ra(a);
 		}
-		i++;
 	}
 }
 
@@ -73,10 +67,10 @@ void	five_numbers(t_list **a, t_list **b)
 		three_numbers(a);
 		//insert_sorted(a, b);
 	}
-	// while ((*b)->index != 0)
-	// {
-	// 	pa(a,b);
-	// }
-	// if ((*b)->index == 0)
-	// 	pa(a,b);
+	while ((*b)->index != 0)
+	{
+		pa(a,b);
+	}
+	if ((*b)->index == 0)
+		pa(a,b);
 }
