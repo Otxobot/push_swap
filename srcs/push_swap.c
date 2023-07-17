@@ -6,7 +6,7 @@
 /*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 15:50:51 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/17 14:52:28 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/17 16:16:58 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ void	start_push_swap(char **input)
 	}
 	else
 	{
-		//ft_print_lists(a, b);
+		ft_print_lists(a, b);
 		big_numbers(&a, &b);
-		//ft_print_lists(a, b);
+		ft_print_lists(a, b);
 	}
 	free_list(a);
 }

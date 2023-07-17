@@ -6,7 +6,7 @@
 /*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:37:42 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/17 14:46:44 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/17 16:54:59 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,29 @@ int	absolute(int num)
 	if (num < 0)
 		num *= -1;
 	return (num);
+}
+
+long int	ft_atoil(const char *str)
+{
+	size_t		i;
+	long int	num;
+	int			sign;
+
+	i = 0;
+	num = 0;
+	sign = 1;
+	if (str[i] == '+' || str[i] == '-')
+	{
+		if (str[i] == '-')
+			sign = -1;
+		i++;
+	}
+	while (str[i] && str[i] >= '0' && str[i] <= '9')
+	{
+		num = num * 10 + (str[i] - '0');
+		i++;
+	}
+	return (num * sign);
 }
 
 void	finish(t_list **lst)

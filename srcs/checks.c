@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checks.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:36:48 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/03 14:22:25 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/17 17:07:04 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,15 @@ int		check_if_repeat(char **input)
 	return (1);
 }
 
+int	ft_check_maxint(char **argv)
+{
+	if (ft_atoil(*argv) > 2147483647)
+		return (0);
+	if (ft_atoil(*argv) < -2147483648)
+		return (0);
+	return (1);
+}
+
 int		check_elements(char	**av)
 {
 	int i = 0;
@@ -37,7 +46,7 @@ int		check_elements(char	**av)
 	
 	while (av[i])
 	{
-		if (ft_atoi(&av[i][j]) > INT_MAX)
+		if (!ft_check_maxint(&av[i]))
 			return (0);
 		// if (av[i][j] == '-')
 		// 	i++;

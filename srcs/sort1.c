@@ -6,7 +6,7 @@
 /*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 11:12:21 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/17 14:48:23 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/17 16:24:29 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,6 @@ void	five_numbers(t_list **a, t_list **b)
 	{
 		sort_b_3(a, b);
 		three_numbers(a);
-		//insert_sorted(a, b);
 	}
 	while ((*b)->index != 0)
 	{

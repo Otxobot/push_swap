@@ -6,7 +6,7 @@
 /*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:21:01 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/16 12:35:04 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/17 16:54:23 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ int			check_args(char **input);
 int			check_elements(char	**av);
 int			is_sorted(char **av);
 int			check_list_sorted(t_list *a);
+int			ft_check_maxint(char **argv);
+long int	ft_atoil(const char *str);
 
 				//free:
 void		free_split(char **input);
