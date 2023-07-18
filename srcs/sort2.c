@@ -6,7 +6,7 @@
 /*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 14:25:48 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/16 12:37:30 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/18 15:19:49 by otxoboy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ void	big_numbers(t_list **a, t_list **b)
         while (bmv > 0 && bmv--)
             rb(&*b);
         pb(a, b);
-        //ft_print_lists(*a, *b);
     }
     while (*b)
         pa(a, b);
