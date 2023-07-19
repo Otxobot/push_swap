@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:21:01 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/19 12:52:26 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/19 14:43:14 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ t_list		*find(t_list *node, int bson);
 void		positionize(t_list **lst);
 
 void    	insert(t_list **b, t_list **a, t_list *node);
-void    	insertion_place(t_list *src, t_list *dst);
+void    	cost_to_place(t_list *src, t_list *dst);
 t_list  	*select1(t_list *lst, t_list *b);
 
 						//movements:

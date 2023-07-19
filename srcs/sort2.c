@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 14:25:48 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/19 12:55:39 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/19 15:24:10 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,34 @@
 
 void	big_numbers(t_list **a, t_list **b)
 {
-	int amv;
-    int bmv;
+	int	mv_a;
+	int	mv_b;
 
-    while (*a)
-    {
-        insertion_place(*a, *b);
-        amv = select1(*a, *b)->relp;
-        bmv = select1(*a, *b)->b;
-        while (amv > 0 && bmv > 0 && amv-- && bmv--)
-            double_rotate(&*a, &*b);
-        while (amv < 0 && bmv < 0 && amv++ && bmv++)
-            double_reverse_rotate(&*a, &*b);
-        while (amv < 0 && amv++)
-            rra(&*a);
-        while (amv > 0 && amv--)
-            ra(&*a);
-        while (bmv < 0 && bmv++)
-            rrb(&*b);
-        while (bmv > 0 && bmv--)
-            rb(&*b);
-        pb(&*a, &*b);
-    }
-    while (*b)
-        pa(&*a, &*b);
-    rotate_s_top(&*a);
+	while (*a)
+	{
+		cost_to_place(*a, *b);
+		mv_a = select1(*a, *b)->relp;
+		mv_b = select1(*a, *b)->b;
+		while (mv_a > 0 && mv_b > 0 && mv_a-- && mv_b--)
+			double_rotate(&*a, &*b);
+		while (mv_a < 0 && mv_b < 0 && mv_a++ && mv_b++)
+			double_reverse_rotate(&*a, &*b);
+		while (mv_a < 0 && mv_a++)
+			rra(&*a);
+		while (mv_a > 0 && mv_a--)
+			ra(&*a);
+		while (mv_b < 0 && mv_b++)
+			rrb(&*b);
+		while (mv_b > 0 && mv_b--)
+			rb(&*b);
+        pb(a, b);
+	}
+	while (*b)
+        pa(a, b);
+	rotate_s_top(&*a);
 }
 
-void	insertion_place(t_list *src, t_list *dst)
+void	cost_to_place(t_list *src, t_list *dst)
 {
 	t_list	*temp;
 

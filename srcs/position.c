@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 14:26:30 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/19 12:00:03 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/19 15:18:55 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,8 +76,8 @@ void	rotate_s_top(t_list **lst)
 {
 	if (find(*lst, -1)->relp > 0)
 		while (find(*lst, -1)->relp != 0)
-			rotate(&*lst);
+			ra(&*lst);
 	else if (find(*lst, -1)->relp < 0)
 		while (find(*lst, -1)->relp != 0)
-			reverse_rotate(&*lst);
+			rra(&*lst);
 }
