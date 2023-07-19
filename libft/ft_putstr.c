@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:41:53 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/19 12:50:22 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/19 15:48:45 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 int		ft_putstr_fd(char *s)
 {
 	int i;
+	int len;
 
+	len = ft_strlen(s);
 	i = 0;
-	while (*s)
+	while (i < len)
 	{
-		ft_putchar(*s++);
+		write (1, &s[i], 1);
 		i++;
 	}
 	return (i);

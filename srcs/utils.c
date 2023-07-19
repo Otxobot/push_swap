@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:37:42 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/19 12:47:37 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/19 15:49:18 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,23 +107,6 @@ long int	ft_atoil(const char *str)
 	return (num * sign);
 }
 
-void	printLinkedList(t_list *head)
-{
-	t_list	*tmp;
-
-	tmp = head;
-	while (tmp != NULL)
-	{
-		printf("node:\n");
-		printf("|-----------|\n");
-		printf("|%d\n       |", tmp->number);
-		printf("|\n index:%d|", tmp->index);
-		printf("-------------\n");
-		tmp = tmp->next;
-	}
-	printf("linked list finished\n");
-}
-
 void	ft_print_lists(t_list *a, t_list *b)
 {
 	printf("LISTA A:\n");
@@ -142,4 +125,24 @@ void	ft_print_lists(t_list *a, t_list *b)
 			break ;
 		b = b->next;
 	}
+}
+
+int	is_sorted(char **av)
+{
+	int	i;
+	int	num1;
+	int	num2;
+
+	i = 0;
+	while (av[i + 1] != NULL)
+	{
+		num1 = ft_atoi (av[i]);
+		num2 = ft_atoi (av[i + 1]);
+		if (num1 > num2)
+		{
+			return (1);
+		}
+		i++;
+	}
+	return (0);
 }

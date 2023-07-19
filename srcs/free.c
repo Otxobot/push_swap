@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 13:39:29 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/19 11:57:39 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/19 15:38:31 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,25 @@
 
 void	free_split(char **input)
 {
-	int i = 0;
+	int	i;
 
+	i = 0;
 	while (input[i])
 	{
-		free(input[i]);
+		free (input[i]);
 		i++;
 	}
-	free(input);
+	free (input);
 }
 
-void free_list(t_list *stack)
+void	free_list(t_list *stack)
 {
-    t_list *temp;
+	t_list	*temp;
 
-    while (stack)
-    {
-        temp = stack;
-        stack = stack->next;
-        free(temp);
-    }
+	while (stack)
+	{
+		temp = stack;
+		stack = stack->next;
+		free (temp);
+	}
 }

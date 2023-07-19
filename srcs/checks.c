@@ -6,16 +6,17 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:36:48 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/19 11:57:45 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/19 15:35:58 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incs/push_swap.h"
 
-int		check_if_repeat(char **input)
+int	check_if_repeat(char **input)
 {
-	int i = 1;
+	int	i;
 
+	i = 1;
 	while (*input)
 	{
 		while (input[i])
@@ -39,17 +40,17 @@ int	ft_check_maxint(char **argv)
 	return (1);
 }
 
-int		check_elements(char	**av)
+int	check_elements(char	**av)
 {
-	int i = 0;
-	int j = 0;
-	
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
 	while (av[i])
 	{
 		if (!ft_check_maxint(&av[i]))
 			return (0);
-		// if (av[i][j] == '-')
-		// 	i++;
 		while (av[i][j])
 		{
 			if (ft_isdigit(av[i][j]) == 0)
@@ -59,28 +60,12 @@ int		check_elements(char	**av)
 		j = 0;
 		i++;
 	}
-	return(1);
+	return (1);
 }
 
-int 	is_sorted(char** av) 
+int	check_list_sorted(t_list *a)
 {
-    int i = 0;
-    while (av[i+1] != NULL) 
-	{
-        int num1 = ft_atoi(av[i]);
-        int num2 = ft_atoi(av[i+1]);
-        if (num1 > num2) 
-		{
-            return (1);
-        }
-        i++;
-    }
-    return 0;
-}
-
-int		check_list_sorted(t_list *a)
-{
-	int 	i;
+	int	i;
 
 	i = a->number;
 	while (a)
@@ -93,10 +78,10 @@ int		check_list_sorted(t_list *a)
 	return (1);
 }
 
-int		check_order(t_list **lst, char a)
+int	check_order(t_list **lst, char a)
 {
 	t_list	*cur;
-	t_list 	*next;
+	t_list	*next;
 
 	cur = *lst;
 	next = (*lst)->next;
