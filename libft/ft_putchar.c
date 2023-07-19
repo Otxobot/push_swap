@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/12 09:41:53 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/19 12:50:22 by abasante         ###   ########.fr       */
+/*   Created: 2023/07/19 12:50:41 by abasante          #+#    #+#             */
+/*   Updated: 2023/07/19 12:51:16 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incs/libft.h"
 
-int		ft_putstr_fd(char *s)
+int	ft_putchar(char c)
 {
-	int i;
-
-	i = 0;
-	while (*s)
-	{
-		ft_putchar(*s++);
-		i++;
-	}
-	return (i);
+	return(write (1, &c, 1));
 }

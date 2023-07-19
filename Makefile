@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+         #
+#    By: abasante <abasante@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/15 11:55:50 by abasante          #+#    #+#              #
-#    Updated: 2023/07/17 17:06:52 by otxoboy          ###   ########.fr        #
+#    Updated: 2023/07/19 11:44:44 by abasante         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,8 +24,8 @@ HEADER = incs/push_swap.h
 SRC = $(addprefix $(SRC_DIR), $(SRC_FILES))
 OBJ = $(SRC:.c=.o)
 
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g3 #-fsanitize=address 
+CC = gcc -g3
+CFLAGS = -Wall -Wextra -Werror #-fsanitize=address 
 
 all: $(NAME)
 

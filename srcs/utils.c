@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
+/*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:37:42 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/17 16:54:59 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/19 12:47:37 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,16 +107,6 @@ long int	ft_atoil(const char *str)
 	return (num * sign);
 }
 
-void	finish(t_list **lst)
-{
-	if (find(*lst, -1)->relp > 0)
-		while (find(*lst, -1)->relp != 0)
-			rotate(&*lst);
-	else if (find(*lst, -1)->relp < 0)
-		while (find(*lst, -1)->relp != 0)
-			rra(&*lst);
-}
-
 void	printLinkedList(t_list *head)
 {
 	t_list	*tmp;
@@ -136,7 +126,7 @@ void	printLinkedList(t_list *head)
 
 void	ft_print_lists(t_list *a, t_list *b)
 {
-	printf("LISTA A:\n\n");
+	printf("LISTA A:\n");
 	while (a)
 	{
 		printf("(%2d) |%2d| (%2d)\n\n", a->relp, a->number, a->b);
@@ -144,7 +134,7 @@ void	ft_print_lists(t_list *a, t_list *b)
 			break ;
 		a = a->next;
 	}
-	printf("LISTA B:\n\n");
+	printf("LISTA B:\n");
 	while (b)
 	{
 		printf("(%2d) |%2d| (%2d)\n\n", b->relp, b->number, b->b);

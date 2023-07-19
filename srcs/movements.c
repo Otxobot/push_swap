@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   movements.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
+/*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 14:26:22 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/17 14:59:45 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/19 12:32:17 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,12 @@ void	double_swap(t_list **a, t_list **b)
 		swap(&*a);
 		swap(&*b);
 		write (1, "ss\n", 3);
-		//ft_putstr_fd("ss\n", 1);
 	}
 }
 
 void	sa(t_list **a)
 {
 	swap(a);
-	//ft_putstr_fd("sa\n", 1);
 	write(1, "sa\n", 3);
 }
 
@@ -54,18 +52,17 @@ void	sb(t_list **b)
 void		reverse_rotate(t_list **lst)
 {
 	t_list	*tmp;
-	t_list	*tmp2;
 	
-	tmp = *lst;
-	tmp2 = *lst;
-	while (tmp->next->next != NULL)
+	if ((*lst)->next)
 	{
-		tmp = tmp->next;
+		tmp = *lst;
+		tmp = ft_lstlast(tmp);
+		tmp->next = *lst;
+		*lst = tmp;
+		while (tmp->next != *lst)
+			tmp = tmp->next;
+		tmp->next = NULL;
 	}
-	tmp2 = tmp->next;
-	tmp->next = NULL;
-	tmp2->next = *lst;
-	*lst = tmp2;
 	relative_position(*lst);
 }
 
@@ -76,7 +73,6 @@ void	double_reverse_rotate(t_list **a, t_list **b)
 		reverse_rotate(&*a);
 		reverse_rotate(&*b);
 		write (1, "rrr\n", 4);
-		ft_putstr_fd("rrr\n", 1);
 	}
 }
 
@@ -96,17 +92,16 @@ void	rra(t_list **a)
 void		rotate(t_list **lst)
 {
 	t_list	*tmp;
-	t_list	*tmp2;
 	
-	tmp = *lst;
-	tmp2 = *lst;
-	while (tmp->next != NULL)
+	if ((*lst)->next)
 	{
+		tmp = *lst;
+		tmp = ft_lstlast(tmp);
+		tmp->next = *lst;
 		tmp = tmp->next;
+		*lst = tmp->next;
+		tmp->next = NULL;
 	}
-	tmp->next = tmp2;
-	*lst = tmp2->next;
-	tmp2->next = NULL;
 	relative_position(*lst);
 }
 
@@ -129,20 +124,20 @@ void	double_rotate(t_list **a, t_list **b)
 		rotate(&*a);
 		rotate(&*b);
 		write (1, "rr\n", 3);
-		//ft_putstr_fd("rr\n", 1);
 	}
 }
+
 // push:
 void	push(t_list	**src, t_list	**dst)
 {
-	t_list	*cur;
+	t_list	*temp;
 
 	if (*src)
 	{
-		cur = *src;
+		temp = *dst;
+		*dst = *src;
 		*src = (*src)->next;
-		cur->next = *dst;
-		*dst = cur;
+		(*dst)->next = temp;
 		(*dst)->bson = 0;
 		(*dst)->b = 0;	
 	}
@@ -158,8 +153,6 @@ void	pa(t_list **a, t_list **b)
 
 void	pb(t_list **a, t_list **b)
 {
-	if(*a == NULL)
-		return ;
 	push(a, b);
 	write(1, "pb\n", 3);
 }

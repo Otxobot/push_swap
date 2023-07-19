@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otxoboy <otxoboy@student.42.fr>            +#+  +:+       +#+        */
+/*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:21:01 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/17 16:54:23 by otxoboy          ###   ########.fr       */
+/*   Updated: 2023/07/19 12:52:26 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ void		positionize(t_list **lst);
 
 void    	insert(t_list **b, t_list **a, t_list *node);
 void    	insertion_place(t_list *src, t_list *dst);
-t_list  	*ft_select(t_list *lst, t_list *b);
+t_list  	*select1(t_list *lst, t_list *b);
 
 						//movements:
 void		push(t_list	**src, t_list	**dst);
@@ -95,7 +95,7 @@ void		sa(t_list **a);
 void		sb(t_list **b);
 void		double_swap(t_list **a, t_list **b);
 
-void		repos_list(t_list **lst);
+void		rotate_s_top(t_list **lst);
 void		finish(t_list **lst);
 						//index:
 void		index_stack(t_list	**stack);

@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:23:47 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/22 18:01:33 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/19 12:52:06 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@
 
 char	**ft_split(char const *s, char c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
-void	ft_putstr_fd(char *s, int fd);
+int		ft_putstr_fd(char *s);
+int		ft_putchar(char c);
 size_t	ft_strlen(const char *s);
 int	    ft_atoi(const char *str);
 int	    ft_isdigit(int c);
