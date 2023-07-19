@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   movements.c                                        :+:      :+:    :+:   */
+/*   movements2.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/11 14:26:22 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/19 15:54:07 by abasante         ###   ########.fr       */
+/*   Created: 2023/07/19 15:53:45 by abasante          #+#    #+#             */
+/*   Updated: 2023/07/19 15:54:10 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incs/push_swap.h"
 
-void	sa(t_list **a)
+void	ra(t_list **a)
 {
-	swap (a);
-	ft_putstr_fd ("sa\n");
+	rotate(a);
+	ft_putstr_fd("ra\n");
 }
 
-void	sb(t_list **b)
+void	rb(t_list **b)
 {
-	swap(b);
-	ft_putstr_fd("sb\n");
+	rotate(b);
+	ft_putstr_fd("rb\n");
 }
 
-void	rrb(t_list **b)
+void	pa(t_list **a, t_list **b)
 {
-	reverse_rotate(b);
-	ft_putstr_fd("rrb\n");
+	push(b, a);
+	ft_putstr_fd("pa\n");
 }
 
-void	rra(t_list **a)
+void	pb(t_list **a, t_list **b)
 {
-	reverse_rotate(a);
-	ft_putstr_fd("rra\n");
+	push(a, b);
+	ft_putstr_fd("pb\n");
 }

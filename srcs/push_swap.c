@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 15:50:51 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/19 15:19:16 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/19 15:58:47 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,36 +14,30 @@
 
 void	start_push_swap(char **input)
 {
-	t_list *a;
-	t_list *b;
+	t_list	*a;
+	t_list	*b;
+	int		size;
 
 	b = NULL;
 	create_linked_list(&a, input);
-	int size = ft_lstsize(a);
+	size = ft_lstsize(a);
 	if (size == 2)
 		sa(&a);
 	else if (size == 3)
-	{
-		three_numbers(&a);	
-	}
+		three_numbers(&a);
 	else if (size <= 5 && size > 1)
-	{
-		//ft_print_lists(a, b);
 		five_numbers(&a, &b);
-		//ft_print_lists(a, b);
-	}
 	else
-	{
 		big_numbers(&a, &b);
-	}
 	free_list(a);
 }
 
 void	create_linked_list(t_list **stack, char **input)
 {
 	t_list	*temp;
-	int i = 1;
+	int		i;
 
+	i = 1;
 	*stack = ft_lstnew(ft_atoi(*input));
 	while (input[i])
 	{
@@ -61,21 +55,21 @@ void	create_linked_list(t_list **stack, char **input)
 	relative_position(*stack);
 }
 
-t_list	*get_min(t_list  **stack)
+t_list	*get_min(t_list	**stack)
 {
 	t_list	*head;
 	t_list	*smallest_node;
 	int		found_min;
 
 	smallest_node = NULL;
-	found_min = 0; //1 == yes 0 == no
+	found_min = 0;
 	head = *stack;
-
 	if (head != NULL)
 	{
 		while (head != NULL)
 		{
-			if ((head->index == -1) && (found_min == 0 || head->number < smallest_node->number))
+			if ((head->index == -1) && \
+			(found_min == 0 || head->number < smallest_node->number))
 			{
 				smallest_node = head;
 				found_min = 1;
@@ -92,7 +86,6 @@ void	index_stack(t_list	**stack)
 	int		index;
 
 	index = 0;
-	//finds the node with the smallest number:
 	head = get_min(&*stack);
 	while (head != NULL)
 	{

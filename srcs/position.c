@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 14:26:30 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/19 15:18:55 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/19 15:55:29 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	positionize(t_list **lst)
 {
 	if (*lst)
 	{
-		max_and_min(*lst);
-		relative_position(*lst);	
+		max_and_min (*lst);
+		relative_position (*lst);
 	}
 }
 
@@ -30,7 +30,6 @@ void	max_and_min(t_list *lst)
 	max = lst->number;
 	min = lst->number;
 	tmp = lst;
-
 	while (lst)
 	{
 		if (lst->number > max)
@@ -53,8 +52,8 @@ void	max_and_min(t_list *lst)
 
 void	relative_position(t_list *lst)
 {
-	int i;
-	int size;
+	int	i;
+	int	size;
 
 	i = 0;
 	size = ft_lstsize(lst);

@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 11:12:21 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/19 12:31:56 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/19 16:00:56 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,29 +18,30 @@ void	three_numbers(t_list **a)
 	t_list	*second;
 	t_list	*third;
 
-	while(check_order(a, 'a') == 1)
+	while (check_order(a, 'a') == 1)
 	{
 		first = (*a);
 		second = (*a)->next;
 		third = (*a)->next->next;
-
-		if (first->number > second->number && first->number < third->number)
+		if (first->number > second->number && \
+		first->number < third->number)
 			sa(a);
-		else if (first->number > second->number && first->number > third->number)
+		else if (first->number > second->number && \
+		first->number > third->number)
 			ra(a);
-		else if (first->number < second->number && first->number > third->number)
+		else if (first->number < second->number && \
+		first->number > third->number)
 			rra(a);
-		else if (first->number < second->number && first->number < third->number)
+		else if (first->number < second->number && \
+		first->number < third->number)
 			sa(a);
 	}
 }
 
-//this func sorts and pushes the numbers from A to B
-//until there are only three numbers left in A
 void	sort_b_3(t_list **a, t_list **b)
 {
-	int size;
-	int inditex;
+	int	size;
+	int	inditex;
 
 	inditex = 0;
 	size = ft_lstsize(*a);
@@ -68,8 +69,8 @@ void	five_numbers(t_list **a, t_list **b)
 	}
 	while ((*b)->index != 0)
 	{
-		pa(a,b);
+		pa(a, b);
 	}
 	if ((*b)->index == 0)
-		pa(a,b);
+		pa(a, b);
 }
