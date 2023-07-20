@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 11:20:20 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/20 11:26:28 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/20 11:31:16 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,10 @@ int			is_sorted(char **av);
 int			check_list_sorted(t_list *a);
 int			ft_check_maxint(char **argv);
 long int	ft_atoil(const char *str);
+
+int			absolute(int num);
+long int	ft_atoil(const char *str);
+int			is_sorted(char **av);
 
 				//free:
 void		free_split(char **input);

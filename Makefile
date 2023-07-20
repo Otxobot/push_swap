@@ -6,7 +6,7 @@
 #    By: abasante <abasante@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/15 11:55:50 by abasante          #+#    #+#              #
-#    Updated: 2023/07/19 15:53:40 by abasante         ###   ########.fr        #
+#    Updated: 2023/07/20 11:32:54 by abasante         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,9 +17,8 @@ INC = incs
 SRC_DIR = srcs/
 SRC_FILES = checks.c push_swap.c free.c main.c utils.c \
 	movements.c sort1.c sort2.c position.c doublemoves.c \
-	movements2.c mainmoves.c
-	 
-
+	movements2.c mainmoves.c utils1.c 
+	
 HEADER = incs/push_swap.h 
 
 SRC = $(addprefix $(SRC_DIR), $(SRC_FILES))
