@@ -6,7 +6,7 @@
 #    By: abasante <abasante@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/15 11:55:50 by abasante          #+#    #+#              #
-#    Updated: 2023/07/20 11:32:54 by abasante         ###   ########.fr        #
+#    Updated: 2023/07/20 11:33:44 by abasante         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ SRC = $(addprefix $(SRC_DIR), $(SRC_FILES))
 OBJ = $(SRC:.c=.o)
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g3 #-fsanitize=address 
+CFLAGS = -Wall -Wextra -Werror #-g3 -fsanitize=address 
 
 all: $(NAME)
 
