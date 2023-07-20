@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 14:25:48 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/19 16:06:23 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/20 11:12:23 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,10 @@ void	big_numbers(t_list **a, t_list **b)
 			rrb(&*b);
 		while (mv_b > 0 && mv_b--)
 			rb(&*b);
-        pb(a, b);
+		pb(a, b);
 	}
 	while (*b)
-        pa(a, b);
+		pa(a, b);
 	rotate_s_top(&*a);
 }
 
@@ -53,7 +53,8 @@ void	cost_to_place(t_list *src, t_list *dst)
 			src->b = find(dst, 1)->relp;
 		else
 		{
-			if (src->number < ft_lstlast(dst)->number && src->number > dst->number)
+			if (src->number < ft_lstlast(dst)->number \
+			&& src->number > dst->number)
 				src->b = 0;
 			while (dst->next)
 			{
@@ -81,14 +82,10 @@ t_list	*select1(t_list *a, t_list *b)
 		{
 			if (b && ((find(b, 1)->relp > 0 && a->relp > 0) \
 			|| (find(b, 1)->relp < 0 && a->relp < 0)))
-            {
-                selected = a;
-            }
+				selected = a;
 			if (b && ((a->relp < 0 && a->b < 0) || (a->relp > 0 && a->b > 0)) \
 			&& absolute(a->relp) > absolute(a->b))
-            {
-                selected = a;
-            }
+				selected = a;
 		}
 		if (absolute(a->relp) + absolute(a->b) < moves)
 		{

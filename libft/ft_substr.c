@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:27:22 by abasante          #+#    #+#             */
-/*   Updated: 2023/05/15 12:04:02 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/20 11:27:49 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ static char	*start_out_of_bounds(void)
 	substr[0] = '\0';
 	return (substr);
 }
-
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

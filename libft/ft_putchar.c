@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 12:50:41 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/19 12:51:16 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/20 11:27:19 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_putchar(char c)
 {
-	return(write (1, &c, 1));
+	return (write (1, &c, 1));
 }

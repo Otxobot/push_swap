@@ -5,28 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/12 09:21:01 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/19 14:43:14 by abasante         ###   ########.fr       */
+/*   Created: 2023/07/20 11:20:20 by abasante          #+#    #+#             */
+/*   Updated: 2023/07/20 11:26:28 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	PUSH_SWAP_H
-# define	PUSH_SWAP_H
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
-#include <stdio.h>
-#include <stdlib.h>
-#include "libft.h"
-#include <limits.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include "libft.h"
+# include <limits.h>
 
-typedef struct			s_list
+typedef struct s_list
 {
 	int				number;
 	int				index;
-	//char			list_name;
 	int				relp;
 	int				bson;
 	int				b;
-	struct s_list 	*next;
+	struct s_list	*next;
 }					t_list;
 
 				//checks:
@@ -42,11 +41,11 @@ long int	ft_atoil(const char *str);
 void		free_split(char **input);
 void		free_list(t_list *lst);
 
-void 		create_linked_list(t_list **head, char **input);
+void		create_linked_list(t_list **head, char **input);
 t_list		*ft_lstnew(int number);
 void		ft_lstadd_back(t_list **stack, t_list *new);
 t_list		*ft_lstlast(t_list *head);
-int 		ft_lstsize(t_list *lst);
+int			ft_lstsize(t_list *lst);
 void		start_push_swap(char **input);
 void		printLinkedList(t_list *head);
 void		ft_print_lists(t_list *a, t_list *b);
@@ -63,7 +62,7 @@ void		insert_sorted(t_list **a, t_list **b);
 int			absolute(int num);
 void		big_numbers(t_list **a, t_list **b);
 
-t_list		*get_min(t_list  **stack);
+t_list		*get_min(t_list	**stack);
 
 						//position:
 void		max_and_min(t_list *lst);
@@ -71,9 +70,9 @@ void		relative_position(t_list *lst);
 t_list		*find(t_list *node, int bson);
 void		positionize(t_list **lst);
 
-void    	insert(t_list **b, t_list **a, t_list *node);
-void    	cost_to_place(t_list *src, t_list *dst);
-t_list  	*select1(t_list *lst, t_list *b);
+void		insert(t_list **b, t_list **a, t_list *node);
+void		cost_to_place(t_list *src, t_list *dst);
+t_list		*select1(t_list *lst, t_list *b);
 
 						//movements:
 void		push(t_list	**src, t_list	**dst);

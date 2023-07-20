@@ -6,16 +6,16 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 09:41:53 by abasante          #+#    #+#             */
-/*   Updated: 2023/07/19 15:48:45 by abasante         ###   ########.fr       */
+/*   Updated: 2023/07/20 11:27:37 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incs/libft.h"
 
-int		ft_putstr_fd(char *s)
+int	ft_putstr_fd(char *s)
 {
-	int i;
-	int len;
+	int	i;
+	int	len;
 
 	len = ft_strlen(s);
 	i = 0;
